@@ -1,5 +1,5 @@
 {
-  "_note": "已推荐过的条目,用于日报去重,避免重复推送同一篇",
+  "_note": "已推荐过的条目,日报去重用",
   "seen": [
     {
       "url": "https://news.ycombinator.com/item?id=48461635",
@@ -22,11 +22,11 @@
       "added": "2026-06-12"
     },
     {
-      "url": "https://www.wired.com/story/model-behavior-interview-with-openai-codex-lead-tibo-sottiaux",
+      "url": "https://github.com/addyosmani/agent-skills",
       "added": "2026-06-12"
     },
     {
-      "url": "https://www.techmeme.com/260611/p51",
+      "url": "https://github.com/phuryn/pm-skills",
       "added": "2026-06-12"
     },
     {
