@@ -84,6 +84,14 @@
     {
       "url": "https://hamel.dev/blog/posts/prompt/",
       "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.langchain.com/blog/how-to-choose-the-right-sandbox-for-your-agent",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.langchain.com/blog/agents-and-applications",
+      "added": "2026-06-12"
     }
   ]
 }
