@@ -1,0 +1,77 @@
+{
+  "_note": "已推荐过的条目,用于日报去重,避免重复推送同一篇",
+  "seen": [
+    {
+      "url": "https://news.ycombinator.com/item?id=48461635",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://rajitkhanna.com/agents",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://techcrunch.com/2026/06/11/coinbase-debuts-mcp-for-agent-trading",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=48449036",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=48492210",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.wired.com/story/model-behavior-interview-with-openai-codex-lead-tibo-sottiaux",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.techmeme.com/260611/p51",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.woshipm.com/?p=6411481",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/06/434317.html",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=48487829",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://lilianweng.github.io/posts/2024-07-07-hallucination/",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/news-agents/",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/qa-evals/",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://www.kennethpayne.uk/p/shall-we-play-a-game",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://thenextweb.com/news/ai-safety-problem-conversation-between-models",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://mashable.com/tech/visa-chatgpt-agents-automatic-purchases",
+      "added": "2026-06-12"
+    }
+  ]
+}
