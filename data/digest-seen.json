@@ -1,5 +1,5 @@
 {
-  "_note": "已推荐过的条目,日报去重用",
+  "_note": "已推荐过的条目,日报去重用(累积)",
   "seen": [
     {
       "url": "https://news.ycombinator.com/item?id=48461635",
@@ -67,6 +67,22 @@
     },
     {
       "url": "https://mashable.com/tech/visa-chatgpt-agents-automatic-purchases",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/product-evals/",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://hamel.dev/blog/posts/evals-faq/",
+      "added": "2026-06-12"
+    },
+    {
+      "url": "https://hamel.dev/blog/posts/prompt/",
       "added": "2026-06-12"
     }
   ]

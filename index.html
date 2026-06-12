@@ -7,7 +7,7 @@
 <style>
   :root{
     --bg:#0f1115; --card:#171a21; --line:#262b36;
-    --fg:#e8eaed; --mut:#9aa3b2; --accent:#7aa2ff; --explore:#ffb86b; --tag:#2a3140;
+    --fg:#e8eaed; --mut:#9aa3b2; --accent:#7aa2ff; --gold:#ffb86b; --tag:#2a3140;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   body{margin:0;background:var(--bg);color:var(--fg);
@@ -18,9 +18,10 @@
   h1{font-size:22px;margin:0 0 4px;letter-spacing:.3px}
   .sub{color:var(--mut);font-size:13px}
   .sub b{color:var(--fg);font-weight:600}
-  section{margin:22px 0 0}
-  .grp{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin:0 0 10px}
+  section{margin:24px 0 0}
+  .grp{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin:0 0 6px}
   .grp .n{color:var(--mut);font-weight:500;font-size:12px}
+  .note{color:var(--mut);font-size:12.5px;margin:0 0 10px}
   ol{list-style:none;margin:0;padding:0}
   li{background:var(--card);border:1px solid var(--line);border-radius:12px;
     padding:12px 14px;margin:0 0 9px}
@@ -29,11 +30,9 @@
   .why{color:var(--mut);font-size:13px;margin-top:4px}
   .meta{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .tag{background:var(--tag);color:var(--mut);font-size:11px;padding:2px 8px;border-radius:20px}
-  .en{color:#8fd6a0}
-  .star{color:var(--explore)}
-  .explore{background:linear-gradient(180deg,#1d2230,#171a21);border:1px solid #33405a;border-radius:14px;margin-top:22px}
-  .explore .grp{color:var(--explore)}
-  .ex-note{color:var(--mut);font-size:12.5px;margin:-2px 0 10px}
+  .star{color:var(--gold);font-weight:700}
+  .empty{background:#14171e;border:1px dashed var(--line);border-radius:12px;
+    padding:12px 14px;color:var(--mut);font-size:13px}
   footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px}
   footer a{color:var(--accent);text-decoration:none}
   .pill{display:inline-block;margin-top:10px;padding:8px 14px;border:1px solid var(--line);
@@ -43,118 +42,53 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>📨 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 按口味手挑 · <b>2026-06-12</b> · 英文加权 · 10 资讯 + 4 精读 + 3 探索</div>
+    <h1>🧰 我的 AI 日报</h1>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-12</b> · 工具 + 深读(零新闻)· 3 工具 + 4 深读</div>
   </header>
 
   <section>
-    <div class="grp">🤖 Agent 开发 <span class="n">3</span></div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">你的领域</span></div>
+    <div class="note">来自 GitHub Trending,已查 star,只留有 traction 的。</div>
     <ol>
-      <li><a href="https://news.ycombinator.com/item?id=48461635" target="_blank">Build a Basic AI Agent from Scratch: Long Task Planning</a>
-        <div class="why">从零搭一个能做长任务规划的 agent,工程向。</div>
-        <div class="meta"><span class="tag en">Hacker News · EN</span></div></li>
-      <li><a href="https://rajitkhanna.com/agents" target="_blank">Building agents without harness engineering</a>
-        <div class="why">不堆"脚手架"也能做 agent——少即是多的实践观点。</div>
-        <div class="meta"><span class="tag en">个人博客 · EN</span></div></li>
-      <li><a href="https://techcrunch.com/2026/06/11/coinbase-debuts-mcp-for-agent-trading" target="_blank">Coinbase debuts MCP for agent trading</a>
-        <div class="why">给 agent 上 MCP 做交易,MCP 落地的真案例。</div>
-        <div class="meta"><span class="tag en">TechCrunch · EN</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">✍️ 提示词 / 评测 <span class="n">1</span></div>
-    <ol>
-      <li><a href="https://news.ycombinator.com/item?id=48492210" target="_blank">Claude Fable 5: mid-tier results on coding tasks</a>
-        <div class="why">HN 上对 Fable 5 编程能力的诚实实测,不吹不黑。</div>
-        <div class="meta"><span class="tag en">Hacker News · EN</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">🛠️ AI 编程工具 / 开源项目 <span class="n">2 · 高 star</span></div>
-    <ol>
-      <li><a href="https://github.com/addyosmani/agent-skills" target="_blank"><span class="star">★</span> addyosmani/agent-skills <span style="color:var(--explore)">55.2k⭐</span></a>
+      <li><a href="https://github.com/addyosmani/agent-skills" target="_blank"><span class="star">55.2k★</span> &nbsp;addyosmani/agent-skills</a>
         <div class="why">给 AI 编程 agent 的"生产级工程技能"集——和你做的 SDD 同一生态(OpenSpec/spec-kit 那挂)。</div>
-        <div class="meta"><span class="tag en">GitHub · 55189⭐</span></div></li>
-      <li><a href="https://github.com/phuryn/pm-skills" target="_blank">phuryn/pm-skills <span style="color:var(--explore)">16.4k⭐</span></a>
-        <div class="why">100+ agentic skills/命令/插件的市场,找现成可复用工作流的好地方。</div>
-        <div class="meta"><span class="tag en">GitHub · 16400⭐</span></div></li>
+        <div class="meta"><span class="tag">GitHub · Addy Osmani</span></div></li>
+      <li><a href="https://github.com/phuryn/pm-skills" target="_blank"><span class="star">16.4k★</span> &nbsp;phuryn/pm-skills</a>
+        <div class="why">100+ agentic skills/命令/插件市场;同时是补**产品(PM)知识**的好入口——你想了解的那块。</div>
+        <div class="meta"><span class="tag">GitHub · PM Skills</span></div></li>
+      <li><a href="https://github.com/NVIDIA/SkillSpector" target="_blank"><span class="star">2.8k★</span> &nbsp;NVIDIA/SkillSpector</a>
+        <div class="why">扫描 AI agent skills 的漏洞与恶意模式——给 agent/skill 体系做安全审查。</div>
+        <div class="meta"><span class="tag">GitHub · NVIDIA</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">🔍 RAG <span class="n">1</span></div>
+    <div class="grp">📚 领域优质长文 <span class="n">实践向 · 当前仍适用</span></div>
+    <div class="note">已剔除过时内容;只留你领域里现在仍站得住的实践长文。</div>
     <ol>
-      <li><a href="https://www.woshipm.com/?p=6411481" target="_blank">我们的 RAG 评测方案，第一版被批得体无完肤</a>
-        <div class="why">RAG 评测实战复盘——"怎么评 RAG"比"怎么搭"更稀缺。(今日英文侧暂无 RAG 深文)</div>
-        <div class="meta"><span class="tag">人人都是产品经理</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">🧑‍🚀 AI 虚拟人 / 数字人 <span class="n">1</span></div>
-    <ol>
-      <li><a href="https://www.qbitai.com/2026/06/434317.html" target="_blank">3D 创作迎来 ChatGPT 时刻：Meshy 发布全球首个 3D AI Agent</a>
-        <div class="why">3D 内容生成 agent 化,数字人构建的上游能力。(英文侧今日无对口)</div>
-        <div class="meta"><span class="tag">量子位</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">🧪 前沿 / 值得知道 <span class="n">2</span></div>
-    <ol>
-      <li><a href="https://news.ycombinator.com/item?id=48487829" target="_blank">Making a vintage LLM from scratch</a>
-        <div class="why">从零手搓一个"复古"LLM,适合啃原理。</div>
-        <div class="meta"><span class="tag en">Hacker News · EN</span></div></li>
-      <li><a href="https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" target="_blank">Anthropic apologizes for invisible Claude Fable guardrails</a>
-        <div class="why">Anthropic 为"隐形"安全护栏致歉,值得知道的一笔。</div>
-        <div class="meta"><span class="tag en">The Verge · EN</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">📚 深度精读 · 常青好文 <span class="n">4 · 不限日期</span></div>
-    <div class="ex-note">非新闻,是值得收藏精读的高质量长文。已去重,推过的不再重复。</div>
-    <ol>
-      <li><a href="https://lilianweng.github.io/posts/2024-07-07-hallucination/" target="_blank"><span class="star">★</span> Extrinsic Hallucinations in LLMs — Lilian Weng</a>
-        <div class="why">你在攻的"降幻觉",最系统的一篇:幻觉从哪来、怎么检测、怎么缓解。</div>
-        <div class="meta"><span class="tag en">Lilian Weng · EN</span></div></li>
-      <li><a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank">LLM Powered Autonomous Agents — Lilian Weng</a>
-        <div class="why">agent 架构的奠基经典:规划 + 记忆 + 工具,做 agent 必读。</div>
-        <div class="meta"><span class="tag en">Lilian Weng · EN</span></div></li>
       <li><a href="https://eugeneyan.com/writing/news-agents/" target="_blank">Building News Agents for Daily Recaps with MCP — Eugene Yan</a>
-        <div class="why">用 MCP 搭"每日新闻 agent"——和你正在做的这件事直接对应。</div>
-        <div class="meta"><span class="tag en">Eugene Yan · EN</span></div></li>
-      <li><a href="https://eugeneyan.com/writing/qa-evals/" target="_blank">Evaluating Long-Context Q&amp;A Systems — Eugene Yan</a>
-        <div class="why">长上下文问答怎么评测,接你的"上下文工程 + 评测"。</div>
-        <div class="meta"><span class="tag en">Eugene Yan · EN</span></div></li>
+        <div class="why">用 MCP 搭"每日新闻 agent"——和你正在做的这件事几乎一一对应,直接能抄思路。</div>
+        <div class="meta"><span class="tag">Eugene Yan · EN</span></div></li>
+      <li><a href="https://eugeneyan.com/writing/product-evals/" target="_blank">Product Evals in Three Simple Steps — Eugene Yan</a>
+        <div class="why">从**产品视角**做评测——正好接你想了解的产品知识 + 你关心的 eval。</div>
+        <div class="meta"><span class="tag">Eugene Yan · EN</span></div></li>
+      <li><a href="https://hamel.dev/blog/posts/evals-faq/" target="_blank">LLM Evals: Everything You Need to Know — Hamel Husain</a>
+        <div class="why">评测权威长文,做 agent/RAG 质量绕不开的一篇。</div>
+        <div class="meta"><span class="tag">Hamel Husain · EN</span></div></li>
+      <li><a href="https://hamel.dev/blog/posts/prompt/" target="_blank">Fuck You, Show Me The Prompt — Hamel Husain</a>
+        <div class="why">prompt 工程经典:扒开框架,看它到底给模型发了什么。做 agent/prompt 必读。</div>
+        <div class="meta"><span class="tag">Hamel Husain · EN</span></div></li>
     </ol>
   </section>
 
-  <section class="explore">
-    <div class="wrap" style="padding:14px">
-      <div class="grp">🧭 探索 · 帮你拓边界 <span class="n">3</span></div>
-      <div class="ex-note">你没点名,但与你的方向相关,值得多看一眼。</div>
-      <ol>
-        <li><a href="https://www.kennethpayne.uk/p/shall-we-play-a-game" target="_blank"><span class="star">★</span> LLMs use tactical nukes in 95% of simulations</a>
-          <div class="why">模拟中 LLM 几乎必然动用战术核武——AI 安全/对齐的尖锐研究。</div>
-          <div class="meta"><span class="tag en">个人研究博客 · EN</span></div></li>
-        <li><a href="https://thenextweb.com/news/ai-safety-problem-conversation-between-models" target="_blank">下一个 AI 安全问题:模型之间的对话</a>
-          <div class="why">多 agent 交互带来的新风险面,做多 agent 系统该想想。</div>
-          <div class="meta"><span class="tag en">TNW · EN</span></div></li>
-        <li><a href="https://mashable.com/tech/visa-chatgpt-agents-automatic-purchases" target="_blank">Visa 接入 ChatGPT,让 AI agent 自动下单</a>
-          <div class="why">agent 商业化前沿——支付侧也开始为 agent 让路。</div>
-          <div class="meta"><span class="tag en">Mashable · EN</span></div></li>
-      </ol>
-    </div>
+  <section>
+    <div class="grp">📰 优质源新文 <span class="n">宝玉 / Simon / Eugene / Lilian / Hamel</span></div>
+    <div class="empty">今日这些优质源没有对口你方向的新文。一旦他们发新文(宝玉的 prompt/agent 实战、Lilian 的深度长文等),会自动进这里。</div>
   </section>
 
   <footer>
-    本页由 Claude 在你命令下,从当日全网信号中按你口味(Agent 开发/记忆/提示词/RAG/开发工具效率/虚拟人,重应用、重英文、免登录)手挑,非程序自动排序。<br>
-    已禁用:CSDN、IT之家。GitHub 项目仅推有一定 star 的(低 star Show HN 已剔除)。已去重,推过的好文不再重复。<br>
-    今日 fresh 暂无够格的 agent 记忆项目,该块由上方「深度精读」的 Lilian Weng 两篇顶上。<br>
-    英文源:Simon Willison / Eugene Yan / Lilian Weng / Hamel Husain / Hacker News(深度博客低频,发新文即抓;历史好文走精读区)。<br>
+    新模型:**只给工具 + 深读,不给新闻**(含大模型发布)。工具来自 GitHub Trending 且查过 star;深读已剔除过时内容;优质源一发对口新文即收。已去重,推过不再重复。<br>
+    已禁用:CSDN、IT之家、serving/推理基建层(投机解码等,你在应用层用不上)。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>
