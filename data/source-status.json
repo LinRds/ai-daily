@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-11T16:43:23.681425Z",
+  "generated_at": "2026-06-13T03:47:23.117563Z",
   "sites": [
     {
       "site_id": "official_ai",
       "site_name": "Official AI Updates",
       "ok": true,
-      "item_count": 223,
-      "duration_ms": 11156,
+      "item_count": 224,
+      "duration_ms": 8558,
       "error": null
     },
     {
@@ -14,15 +14,15 @@
       "site_name": "AI Breakfast",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 104892,
-      "error": "HTTPSConnectionPool(host='r.jina.ai', port=443): Max retries exceeded with url: /https://aibreakfast.beehiiv.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x1349e7b10>, 'Connection to r.jina.ai timed out. (connect timeout=25)'))"
+      "duration_ms": 104862,
+      "error": "HTTPSConnectionPool(host='r.jina.ai', port=443): Max retries exceeded with url: /https://aibreakfast.beehiiv.com/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x11fccec10>, 'Connection to r.jina.ai timed out. (connect timeout=25)'))"
     },
     {
       "site_id": "followbuilders",
       "site_name": "Follow Builders",
       "ok": true,
-      "item_count": 38,
-      "duration_ms": 474,
+      "item_count": 27,
+      "duration_ms": 490,
       "error": null
     },
     {
@@ -30,7 +30,7 @@
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 2240,
+      "duration_ms": 1887,
       "error": null
     },
     {
@@ -38,15 +38,15 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 2159,
+      "duration_ms": 2198,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
       "ok": true,
-      "item_count": 371,
-      "duration_ms": 13936,
+      "item_count": 374,
+      "duration_ms": 9989,
       "error": null
     },
     {
@@ -54,23 +54,23 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 1,
-      "duration_ms": 6883,
+      "duration_ms": 4428,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 3062,
-      "duration_ms": 2301,
+      "item_count": 3033,
+      "duration_ms": 2181,
       "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 68,
-      "duration_ms": 1057,
+      "item_count": 78,
+      "duration_ms": 1311,
       "error": null
     },
     {
@@ -78,7 +78,7 @@
       "site_name": "AI HubToday",
       "ok": true,
       "item_count": 10,
-      "duration_ms": 793,
+      "duration_ms": 1968,
       "error": null
     },
     {
@@ -86,7 +86,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 720,
+      "duration_ms": 519,
       "error": null
     },
     {
@@ -94,15 +94,15 @@
       "site_name": "AI HOT",
       "ok": true,
       "item_count": 50,
-      "duration_ms": 249,
+      "duration_ms": 222,
       "error": null
     },
     {
       "site_id": "newsnow",
       "site_name": "NewsNow",
       "ok": true,
-      "item_count": 149,
-      "duration_ms": 1093,
+      "item_count": 143,
+      "duration_ms": 771,
       "error": null
     },
     {
@@ -110,12 +110,12 @@
       "site_name": "OPML RSS",
       "ok": true,
       "partial_failures": 0,
-      "item_count": 285,
-      "duration_ms": 44381,
+      "item_count": 733,
+      "duration_ms": 41474,
       "error": null,
-      "feed_count": 9,
-      "effective_feed_count": 9,
-      "ok_feed_count": 9,
+      "feed_count": 17,
+      "effective_feed_count": 17,
+      "ok_feed_count": 17,
       "failed_feed_count": 0,
       "skipped_feed_count": 0,
       "replaced_feed_count": 0
@@ -126,18 +126,19 @@
     "aibreakfast"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 5426,
-  "items_before_topic_filter": 5235,
-  "items_in_24h": 677,
+  "fetched_raw_items": 5842,
+  "items_before_topic_filter": 2506,
+  "items_in_24h": 317,
   "rss_opml": {
     "enabled": true,
     "path": "configured",
-    "feed_total": 9,
-    "effective_feed_total": 9,
-    "ok_feeds": 9,
+    "feed_total": 17,
+    "effective_feed_total": 17,
+    "ok_feeds": 17,
     "failed_feeds": [],
     "zero_item_feeds": [
-      "https://mshibanami.github.io/GitHubTrendingRSS/weekly/all.xml"
+      "https://mshibanami.github.io/GitHubTrendingRSS/weekly/all.xml",
+      "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"
     ],
     "skipped_feeds": [],
     "replaced_feeds": [],
@@ -150,7 +151,22 @@
         "effective_feed_url": "https://www.zengzhang.ai/feed",
         "ok": true,
         "item_count": 20,
-        "duration_ms": 1207,
+        "duration_ms": 3288,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:29cc0ca988",
+        "site_name": "OPML RSS",
+        "feed_title": "Eugene Yan",
+        "feed_url": "https://eugeneyan.com/rss/",
+        "effective_feed_url": "https://eugeneyan.com/rss/",
+        "ok": true,
+        "item_count": 210,
+        "duration_ms": 1822,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -165,7 +181,52 @@
         "effective_feed_url": "https://mshibanami.github.io/GitHubTrendingRSS/weekly/all.xml",
         "ok": true,
         "item_count": 0,
-        "duration_ms": 633,
+        "duration_ms": 2467,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:af5c26b29a",
+        "site_name": "OPML RSS",
+        "feed_title": "GitHub Trending Daily (All)",
+        "feed_url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
+        "effective_feed_url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
+        "ok": true,
+        "item_count": 0,
+        "duration_ms": 2302,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:e3d7bc9ad4",
+        "site_name": "OPML RSS",
+        "feed_title": "Hacker News",
+        "feed_url": "https://hnrss.org/frontpage",
+        "effective_feed_url": "https://hnrss.org/frontpage",
+        "ok": true,
+        "item_count": 20,
+        "duration_ms": 4665,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:398199d719",
+        "site_name": "OPML RSS",
+        "feed_title": "Hamel Husain",
+        "feed_url": "https://hamel.dev/index.xml",
+        "effective_feed_url": "https://hamel.dev/index.xml",
+        "ok": true,
+        "item_count": 20,
+        "duration_ms": 2081,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -180,7 +241,37 @@
         "effective_feed_url": "https://hellogithub.com/rss",
         "ok": true,
         "item_count": 122,
-        "duration_ms": 244,
+        "duration_ms": 1754,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:218248305b",
+        "site_name": "OPML RSS",
+        "feed_title": "LangChain Blog",
+        "feed_url": "https://www.langchain.com/blog/rss.xml",
+        "effective_feed_url": "https://www.langchain.com/blog/rss.xml",
+        "ok": true,
+        "item_count": 95,
+        "duration_ms": 1832,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:db098bdf1e",
+        "site_name": "OPML RSS",
+        "feed_title": "Lilian Weng",
+        "feed_url": "https://lilianweng.github.io/index.xml",
+        "effective_feed_url": "https://lilianweng.github.io/index.xml",
+        "ok": true,
+        "item_count": 51,
+        "duration_ms": 1376,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -195,7 +286,37 @@
         "effective_feed_url": "https://simonwillison.net/atom/everything/",
         "ok": true,
         "item_count": 30,
-        "duration_ms": 760,
+        "duration_ms": 1869,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:2d8925b354",
+        "site_name": "OPML RSS",
+        "feed_title": "The Changelog",
+        "feed_url": "https://changelog.com/feed",
+        "effective_feed_url": "https://changelog.com/feed",
+        "ok": true,
+        "item_count": 50,
+        "duration_ms": 2697,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false,
+        "bridge_type": null
+      },
+      {
+        "site_id": "opmlrss:d8ce8088e5",
+        "site_name": "OPML RSS",
+        "feed_title": "console.dev Tools",
+        "feed_url": "https://console.dev/tools/rss.xml",
+        "effective_feed_url": "https://console.dev/tools/rss.xml",
+        "ok": true,
+        "item_count": 2,
+        "duration_ms": 2467,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -210,7 +331,7 @@
         "effective_feed_url": "https://baoyu.io/feed.xml",
         "ok": true,
         "item_count": 50,
-        "duration_ms": 3069,
+        "duration_ms": 2468,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -225,7 +346,7 @@
         "effective_feed_url": "https://wechat2rss.xlab.app/feed/51e92aad2728acdd1fda7314be32b16639353001.xml",
         "ok": true,
         "item_count": 20,
-        "duration_ms": 1125,
+        "duration_ms": 2240,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -240,7 +361,7 @@
         "effective_feed_url": "https://wechat2rss.xlab.app/feed/9685937b45fe9c7a526dbc32e4f24ba879a65b9a.xml",
         "ok": true,
         "item_count": 20,
-        "duration_ms": 2249,
+        "duration_ms": 4216,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -255,7 +376,7 @@
         "effective_feed_url": "http://www.ruanyifeng.com/blog/atom.xml",
         "ok": true,
         "item_count": 3,
-        "duration_ms": 418,
+        "duration_ms": 224,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -270,7 +391,7 @@
         "effective_feed_url": "https://wechat2rss.xlab.app/feed/c74ed6db00cfbf16f2a048a165b4453f982681f0.xml",
         "ok": true,
         "item_count": 20,
-        "duration_ms": 34676,
+        "duration_ms": 3706,
         "error": null,
         "skipped": false,
         "skip_reason": null,
@@ -299,6 +420,6 @@
     "effective_result_cap": 20,
     "estimated_max_cost_usd_per_run": 0.1,
     "run_utc_hour": 0,
-    "generated_date_utc": "2026-06-11"
+    "generated_date_utc": "2026-06-13"
   }
 }

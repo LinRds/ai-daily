@@ -31,8 +31,6 @@
   .meta{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .tag{background:var(--tag);color:var(--mut);font-size:11px;padding:2px 8px;border-radius:20px}
   .star{color:var(--gold);font-weight:700}
-  .empty{background:#14171e;border:1px dashed var(--line);border-radius:12px;
-    padding:12px 14px;color:var(--mut);font-size:13px}
   footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px}
   footer a{color:var(--accent);text-decoration:none}
   .pill{display:inline-block;margin-top:10px;padding:8px 14px;border:1px solid var(--line);
@@ -43,60 +41,52 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-12</b> · 工具 + 深读(零新闻)· 3 工具 + 4 深读 + 2 新文</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-13</b> · 工具 + 深读(零新闻)· 3 工具 + 3 新文 + 1 深读</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">你的领域</span></div>
-    <div class="note">来自 GitHub Trending,已查 star,只留有 traction 的。</div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">正中你核心:记忆 / 上下文 / skills</span></div>
+    <div class="note">来自 GitHub Trending,已查 star;昨天推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/addyosmani/agent-skills" target="_blank"><span class="star">55.2k★</span> &nbsp;addyosmani/agent-skills</a>
-        <div class="why">给 AI 编程 agent 的"生产级工程技能"集——和你做的 SDD 同一生态(OpenSpec/spec-kit 那挂)。</div>
-        <div class="meta"><span class="tag">GitHub · Addy Osmani</span></div></li>
-      <li><a href="https://github.com/phuryn/pm-skills" target="_blank"><span class="star">16.4k★</span> &nbsp;phuryn/pm-skills</a>
-        <div class="why">100+ agentic skills/命令/插件市场;同时是补**产品(PM)知识**的好入口——你想了解的那块。</div>
-        <div class="meta"><span class="tag">GitHub · PM Skills</span></div></li>
-      <li><a href="https://github.com/NVIDIA/SkillSpector" target="_blank"><span class="star">2.8k★</span> &nbsp;NVIDIA/SkillSpector</a>
-        <div class="why">扫描 AI agent skills 的漏洞与恶意模式——给 agent/skill 体系做安全审查。</div>
-        <div class="meta"><span class="tag">GitHub · NVIDIA</span></div></li>
+      <li><a href="https://github.com/supermemoryai/supermemory" target="_blank"><span class="star">26.9k★</span> &nbsp;supermemoryai/supermemory</a>
+        <div class="why">"记忆 + 上下文引擎",快、可扩展——直接对应你在攻的 Agent 记忆 + 上下文工程。</div>
+        <div class="meta"><span class="tag">GitHub · 记忆/上下文</span></div></li>
+      <li><a href="https://github.com/mksglu/context-mode" target="_blank"><span class="star">17.3k★</span> &nbsp;mksglu/context-mode</a>
+        <div class="why">给 AI 编程 agent 做上下文窗口优化(沙箱化工具输出、压噪)——你的上下文工程实战。</div>
+        <div class="meta"><span class="tag">GitHub · 上下文</span></div></li>
+      <li><a href="https://github.com/anthropics/skills" target="_blank"><span class="star">150k★</span> &nbsp;anthropics/skills</a>
+        <div class="why">Anthropic 官方 Agent Skills 仓库——你喜欢的 agent-skills 生态的一手源头。</div>
+        <div class="meta"><span class="tag">GitHub · Anthropic 官方</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📚 领域优质长文 <span class="n">实践向 · 当前仍适用</span></div>
-    <div class="note">已剔除过时内容;只留你领域里现在仍站得住的实践长文。</div>
+    <div class="grp">📰 优质源新文 <span class="n">本周 · 未推过</span></div>
     <ol>
-      <li><a href="https://eugeneyan.com/writing/news-agents/" target="_blank">Building News Agents for Daily Recaps with MCP — Eugene Yan</a>
-        <div class="why">用 MCP 搭"每日新闻 agent"——和你正在做的这件事几乎一一对应,直接能抄思路。</div>
-        <div class="meta"><span class="tag">Eugene Yan · EN</span></div></li>
-      <li><a href="https://eugeneyan.com/writing/product-evals/" target="_blank">Product Evals in Three Simple Steps — Eugene Yan</a>
-        <div class="why">从**产品视角**做评测——正好接你想了解的产品知识 + 你关心的 eval。</div>
-        <div class="meta"><span class="tag">Eugene Yan · EN</span></div></li>
-      <li><a href="https://hamel.dev/blog/posts/evals-faq/" target="_blank">LLM Evals: Everything You Need to Know — Hamel Husain</a>
-        <div class="why">评测权威长文,做 agent/RAG 质量绕不开的一篇。</div>
-        <div class="meta"><span class="tag">Hamel Husain · EN</span></div></li>
-      <li><a href="https://hamel.dev/blog/posts/prompt/" target="_blank">Fuck You, Show Me The Prompt — Hamel Husain</a>
-        <div class="why">prompt 工程经典:扒开框架,看它到底给模型发了什么。做 agent/prompt 必读。</div>
-        <div class="meta"><span class="tag">Hamel Husain · EN</span></div></li>
+      <li><a href="https://www.langchain.com/blog/designing-efficient-verifiers-for-legal-agents" target="_blank">Designing Efficient Verifiers for Legal Agents — LangChain</a>
+        <div class="why">给 agent 设计高效"校验器"——agent 质量/可信度落地的实操,接你的 in-context 把关思路。</div>
+        <div class="meta"><span class="tag">LangChain · 06-10 · EN</span></div></li>
+      <li><a href="https://simonwillison.net/2026/Jun/12/openai-webrtc/" target="_blank">OpenAI WebRTC Audio Session, now with document context — Simon Willison</a>
+        <div class="why">实时语音会话怎么带上文档上下文——贴你的聊天 + 上下文场景。</div>
+        <div class="meta"><span class="tag">Simon Willison · 06-12 · EN</span></div></li>
+      <li><a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651037936&idx=2&sn=04009945810ed4de9c5f7f7b30783c55" target="_blank">Anthropic:生物学 Agent 的瓶颈不在模型,而在数据基础设施 — 机器之心</a>
+        <div class="why">agent 落地真瓶颈的视角——常被忽略的"数据基建 > 模型"。(微信链,浏览器可读)</div>
+        <div class="meta"><span class="tag">机器之心 · 转 Anthropic</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📰 优质源新文 <span class="n">本周</span></div>
-    <div class="note">来自你订阅的优质源、本周发布且对口的。</div>
+    <div class="grp">📚 深读 <span class="n">backlog 轮换</span></div>
     <ol>
-      <li><a href="https://www.langchain.com/blog/how-to-choose-the-right-sandbox-for-your-agent" target="_blank">How to Choose the Right Sandbox for AI Agents — LangChain</a>
-        <div class="why">给 agent 选执行沙箱的实操对比——做 agent 落地绕不开的工程选型。</div>
-        <div class="meta"><span class="tag">LangChain · 06-12 · EN</span></div></li>
-      <li><a href="https://www.langchain.com/blog/agents-and-applications" target="_blank">The Missing Link Between Agents and Applications — LangChain</a>
-        <div class="why">agent 怎么接进真实应用——架构层那块常被忽略的缺失环节。</div>
-        <div class="meta"><span class="tag">LangChain · 06-11 · EN</span></div></li>
+      <li><a href="https://hamel.dev/blog/posts/evals-skills/" target="_blank">Evals Skills for Coding Agents — Hamel Husain</a>
+        <div class="why">给编程 agent 做评测的实操技能——你关心的 agent + eval 交叉点。</div>
+        <div class="meta"><span class="tag">Hamel Husain · EN</span></div></li>
     </ol>
   </section>
 
   <footer>
-    新模型:**只给工具 + 深读,不给新闻**(含大模型发布)。工具来自 GitHub Trending 且查过 star;深读已剔除过时内容;优质源一发对口新文即收。已去重,推过不再重复。<br>
-    已禁用:CSDN、IT之家、serving/推理基建层(投机解码等,你在应用层用不上)。<br>
+    工具 + 深读,不给新闻。工具来自 GitHub Trending 且查过 star;深读已剔除过时内容;优质源一发对口新文即收。已去重(`digest-seen`),推过不重复。<br>
+    已禁用:CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>

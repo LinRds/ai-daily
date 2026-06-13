@@ -92,6 +92,34 @@
     {
       "url": "https://www.langchain.com/blog/agents-and-applications",
       "added": "2026-06-12"
+    },
+    {
+      "url": "https://github.com/supermemoryai/supermemory",
+      "added": "2026-06-13"
+    },
+    {
+      "url": "https://github.com/mksglu/context-mode",
+      "added": "2026-06-13"
+    },
+    {
+      "url": "https://github.com/anthropics/skills",
+      "added": "2026-06-13"
+    },
+    {
+      "url": "https://www.langchain.com/blog/designing-efficient-verifiers-for-legal-agents",
+      "added": "2026-06-13"
+    },
+    {
+      "url": "https://simonwillison.net/2026/Jun/12/openai-webrtc/",
+      "added": "2026-06-13"
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651037936&idx=2&sn=04009945810ed4de9c5f7f7b30783c55",
+      "added": "2026-06-13"
+    },
+    {
+      "url": "https://hamel.dev/blog/posts/evals-skills/",
+      "added": "2026-06-13"
     }
   ]
 }
