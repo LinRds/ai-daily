@@ -132,6 +132,38 @@
     {
       "url": "https://cameronrwolfe.substack.com/p/agent-evals",
       "added": "2026-06-13"
+    },
+    {
+      "url": "https://github.com/obra/superpowers",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://github.com/chopratejas/headroom",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://baoyu.io/blog/2026-06-13/codex-design-model-gap",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://www.philschmid.de/how-managed-agents-work",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://weaviate.io/blog/coding-assistant-weaviate-mcp",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://cameronrwolfe.substack.com/p/llm-bench",
+      "added": "2026-06-14"
+    },
+    {
+      "url": "https://garrit.xyz/posts/2026-05-06-dont-trust-large-context-windows",
+      "added": "2026-06-14"
     }
   ]
 }
