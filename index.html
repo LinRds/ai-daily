@@ -41,49 +41,34 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-14</b> · 工具 + 深读(零新闻)· 3 工具 + 3 新文 + 2 深读</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-15</b> · 工具 + 深读(零新闻)· 3 工具 + 2 深读</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:SDD/skills · 提示词 · 上下文工程</span></div>
-    <div class="note">来自 GitHub Trending,已查 star;昨天推过的已去重。</div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:RAG 入库 · 代码上下文 · Agent 联网</span></div>
+    <div class="note">来自 GitHub Trending,已查 star;前几天推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/obra/superpowers" target="_blank"><span class="star">227k★</span> &nbsp;obra/superpowers</a>
-        <div class="why">"agentic skills 框架 + 软件开发方法论"——正中你撸过的 SDD:把开发流程沉淀成 agent 可复用的 skill。你当年没找到的那类开源框架,这是现在最热的一个。</div>
-        <div class="meta"><span class="tag">GitHub · SDD/skills</span></div></li>
-      <li><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank"><span class="star">140k★</span> &nbsp;x1xhlol/system-prompts-and-models-of-ai-tools</a>
-        <div class="why">Claude Code / Cursor / Codex 等主流 AI 工具的<b>完整 system prompt 实录</b>——提示词工程的一手范本,看顶级产品怎么写系统提示。</div>
-        <div class="meta"><span class="tag">GitHub · 提示词工程</span></div></li>
-      <li><a href="https://github.com/chopratejas/headroom" target="_blank"><span class="star">26.6k★</span> &nbsp;chopratejas/headroom</a>
-        <div class="why">在工具输出/日志/文件/RAG chunk 进上下文窗口<b>之前</b>先压缩——直接对应你在攻的"多轮上下文工程 + 压噪",RAG 检索结果塞窗口前的减负层。</div>
-        <div class="meta"><span class="tag">GitHub · 上下文/RAG</span></div></li>
+      <li><a href="https://github.com/microsoft/markitdown" target="_blank"><span class="star">153k★</span> &nbsp;microsoft/markitdown</a>
+        <div class="why">把 PDF / Office / 网页 / 图片等一键转成干净 Markdown——RAG 管线最脏最累的"入库前清洗"那一步,微软官方做好了。喂给 LLM / 切 chunk 前的标准前处理。</div>
+        <div class="meta"><span class="tag">GitHub · RAG 入库</span></div></li>
+      <li><a href="https://github.com/safishamsi/graphify" target="_blank"><span class="star">67k★</span> &nbsp;safishamsi/graphify</a>
+        <div class="why"><code>/graphify .</code> 把整个项目(代码+SQL schema+文档+PDF)builds 成<b>可查询的知识图谱</b>,让 AI 编程助手"查图谱"而不是满仓库 grep——给 coding agent 喂结构化代码上下文,正打你的上下文工程 + AI 开发工具。</div>
+        <div class="meta"><span class="tag">GitHub · 代码上下文</span></div></li>
+      <li><a href="https://github.com/Panniantong/Agent-Reach" target="_blank"><span class="star">28.9k★</span> &nbsp;Panniantong/Agent-Reach</a>
+        <div class="why">一个 CLI 给 agent 装上读/搜 Twitter、Reddit、YouTube、GitHub、B站、小红书的能力,零 API 费——agent 工具调用 / 联网取数的现成轮子,接入方式换代它替你维护。</div>
+        <div class="meta"><span class="tag">GitHub · Agent 联网</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📰 优质源新文 <span class="n">未推过</span></div>
+    <div class="grp">📚 深读 <span class="n">backlog 轮换 · 今日优质源无对口新文</span></div>
     <ol>
-      <li><a href="https://baoyu.io/blog/2026-06-13/codex-design-model-gap" target="_blank">为啥 Codex 还不推出类似 Codex Design 的产品? — 宝玉</a>
-        <div class="why">从"模型能力差距"角度聊 AI 编程工具的产品边界——兼顾你的 AI 开发工具 + 产品视角,宝玉一贯的高质量拆解。</div>
-        <div class="meta"><span class="tag">宝玉 · 06-13 · 中</span></div></li>
-      <li><a href="https://www.philschmid.de/how-managed-agents-work" target="_blank">How Gemini Managed Agents Works under the Hood — Phil Schmid</a>
-        <div class="why">扒托管 agent 的内部机制(编排/状态/工具调用怎么转)——做 agent 系统时理解"框架替你做了什么"的实战拆解。</div>
-        <div class="meta"><span class="tag">Phil Schmid · 06-10 · EN</span></div></li>
-      <li><a href="https://weaviate.io/blog/coding-assistant-weaviate-mcp" target="_blank">Build a Coding Assistant with Weaviate MCP: RAG over Code — Weaviate</a>
-        <div class="why">用 MCP 把向量库接进编程助手,对代码做 RAG——你的 RAG + coding + MCP 三个点同时命中的动手教程。</div>
-        <div class="meta"><span class="tag">Weaviate · RAG/MCP · EN</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">📚 深读 <span class="n">backlog 轮换</span></div>
-    <ol>
-      <li><a href="https://cameronrwolfe.substack.com/p/llm-bench" target="_blank">The Anatomy of an LLM Benchmark — Cameron Wolfe</a>
-        <div class="why">拆解一个 LLM benchmark 由什么构成、怎么才算可信——接你"如何高效验证 AI 产出正确性"主线的底层功:不懂 benchmark 构造就设计不出好 verifier。</div>
-        <div class="meta"><span class="tag">Cameron Wolfe · 验证/eval · EN</span></div></li>
-      <li><a href="https://garrit.xyz/posts/2026-05-06-dont-trust-large-context-windows" target="_blank">Don't trust large context windows — Garrit</a>
-        <div class="why">实测大上下文窗口在长输入下的可靠性衰减——直接打你的"多轮上下文工程"痛点:为什么不能无脑往窗口里塞,该怎么取舍。</div>
-        <div class="meta"><span class="tag">深读 · 上下文工程 · EN</span></div></li>
+      <li><a href="https://eugeneyan.com/writing/working-with-ai/" target="_blank">How to Work and Compound with AI — Eugene Yan</a>
+        <div class="why">讲怎么跟 AI 协作并让效果<b>复利</b>:每个产物(代码/文档/分析/决策)都变成下一次的上下文——这正是你"多轮上下文工程"的工作流版答案。</div>
+        <div class="meta"><span class="tag">Eugene Yan · 上下文工程 · EN</span></div></li>
+      <li><a href="https://hamel.dev/blog/posts/revenge/" target="_blank">The Revenge of the Data Scientist — Hamel Husain</a>
+        <div class="why">AI 时代里"严谨度量 / 做 eval / 判断对不对"这套数据科学功力反而更值钱——正接你那条"如何高效验证 AI 产出正确性"的主线。</div>
+        <div class="meta"><span class="tag">Hamel Husain · 验证/eval · EN</span></div></li>
     </ol>
   </section>
 
