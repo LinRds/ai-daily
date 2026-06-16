@@ -184,6 +184,26 @@
     {
       "url": "https://hamel.dev/blog/posts/revenge/",
       "added": "2026-06-15"
+    },
+    {
+      "url": "https://github.com/RyanCodrai/turbovec",
+      "added": "2026-06-16"
+    },
+    {
+      "url": "https://github.com/rohitg00/agentmemory",
+      "added": "2026-06-16"
+    },
+    {
+      "url": "https://github.com/trycua/cua",
+      "added": "2026-06-16"
+    },
+    {
+      "url": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+      "added": "2026-06-16"
+    },
+    {
+      "url": "https://www.langchain.com/blog/production-monitoring",
+      "added": "2026-06-16"
     }
   ]
 }
