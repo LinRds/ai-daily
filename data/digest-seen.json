@@ -204,6 +204,18 @@
     {
       "url": "https://www.langchain.com/blog/production-monitoring",
       "added": "2026-06-16"
+    },
+    {
+      "url": "https://github.com/alibaba/zvec",
+      "added": "2026-06-17"
+    },
+    {
+      "url": "https://github.com/langchain-ai/open-swe",
+      "added": "2026-06-17"
+    },
+    {
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "added": "2026-06-17"
     }
   ]
 }

@@ -41,34 +41,22 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-16</b> · 工具 + 深读(零新闻)· 3 工具 + 2 新文</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-17</b> · 工具 + 深读(零新闻)· 3 工具</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:向量库 · Agent 记忆 · Computer-Use Agent</span></div>
-    <div class="note">来自 GitHub Trending + 你核心兴趣区的高 star 项目,已查 star;前几天推过的已去重。</div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:向量库 · 开源 Coding Agent · TTS/数字人</span></div>
+    <div class="note">来自 GitHub Trending,已查 star;前几天推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/RyanCodrai/turbovec" target="_blank"><span class="star">11.7k★</span> &nbsp;RyanCodrai/turbovec</a>
-        <div class="why">Rust 写的向量索引(基于 Google TurboQuant):1000 万向量 float32 要 31GB,它压到 <b>4GB</b> 还搜得比 FAISS 快;在线 ingest、无需 train/调参。正接你刚校准的 RAG 重心——<b>向量库 + 索引性能</b>。</div>
+      <li><a href="https://github.com/alibaba/zvec" target="_blank"><span class="star">10.7k★</span> &nbsp;alibaba/zvec</a>
+        <div class="why">阿里开源的<b>轻量级 in-process 向量数据库</b>(类比"向量界的 SQLite",嵌进进程跑、免独立服务)——接你刚校准的 RAG 向量库重心,适合中小规模检索 / 本地原型,省掉 Milvus 那套部署。</div>
         <div class="meta"><span class="tag">GitHub · 向量库</span></div></li>
-      <li><a href="https://github.com/rohitg00/agentmemory" target="_blank"><span class="star">23k★</span> &nbsp;rohitg00/agentmemory</a>
-        <div class="why">给 AI coding agent 的<b>持久记忆</b>层,任意 agent / chat 助手都能接——正打你 tier-1 的 Agent 记忆,可对照你主业 Viking 记忆库的设计取舍。</div>
-        <div class="meta"><span class="tag">GitHub · Agent 记忆</span></div></li>
-      <li><a href="https://github.com/trycua/cua" target="_blank"><span class="star">18.2k★</span> &nbsp;trycua/cua</a>
-        <div class="why">Computer-Use Agent 的开源基建:沙箱 + SDK + <b>benchmark</b>,训练/评测能操控整台桌面(mac/Linux/Win)的 agent。agent 开发新前沿,且自带 eval 维度。</div>
-        <div class="meta"><span class="tag">GitHub · Computer-Use Agent</span></div></li>
-    </ol>
-  </section>
-
-  <section>
-    <div class="grp">📰 优质源新文 <span class="n">LangChain 昨天连发 · 全在你验证主线上</span></div>
-    <ol>
-      <li><a href="https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks" target="_blank">Building a 100x Cheaper Trace Judge with Fireworks — LangChain</a>
-        <div class="why">微调一个 Qwen judge 模型从 trace 里检出"感知错误",用比前沿模型便宜 <b>10–100x</b> 的成本大规模判 agent 产出对不对——你那条"如何高效验证 AI 产出正确性"的最直接的工程范本。</div>
-        <div class="meta"><span class="tag">LangChain · 06-15 · 验证/judge · EN</span></div></li>
-      <li><a href="https://www.langchain.com/blog/production-monitoring" target="_blank">Agent Observability: How to Monitor and Evaluate LLM Agents in Production — LangChain</a>
-        <div class="why">为什么 agent 的生产观测不同于传统 APM(输入无界 + 非确定性),怎么用标注队列 + 在线 LLM evaluator + 自动模式发现来评测——agent 上线后"持续验证"的方法论。</div>
-        <div class="meta"><span class="tag">LangChain · 06-15 · 观测/eval · EN</span></div></li>
+      <li><a href="https://github.com/langchain-ai/open-swe" target="_blank"><span class="star">10k★</span> &nbsp;langchain-ai/open-swe</a>
+        <div class="why">LangChain 昨天开源的<b>异步 coding agent 框架</b>(announcement 刚发):建在 LangGraph + Deep Agents 上,自带云沙箱、Slack/Linear 触发、<b>subagent 编排</b>、自动建 PR——Stripe/Ramp 那种"内部 coding agent"的开源版,正对你的 AI 开发工具 + agent 编排。</div>
+        <div class="meta"><span class="tag">GitHub · Coding Agent</span></div></li>
+      <li><a href="https://github.com/OpenBMB/VoxCPM" target="_blank"><span class="star">30.3k★</span> &nbsp;OpenBMB/VoxCPM</a>
+        <div class="why">Tokenizer-free 的多语种 TTS,支持音色设计 + <b>逼真克隆</b>——接你 tier-2 的 AI 虚拟人/数字人方向(语音那一环),做对话 avatar 的发声层可直接拿来试。</div>
+        <div class="meta"><span class="tag">GitHub · TTS/数字人</span></div></li>
     </ol>
   </section>
 
