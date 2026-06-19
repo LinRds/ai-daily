@@ -216,6 +216,30 @@
     {
       "url": "https://github.com/OpenBMB/VoxCPM",
       "added": "2026-06-17"
+    },
+    {
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "added": "2026-06-19"
+    },
+    {
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "added": "2026-06-19"
+    },
+    {
+      "url": "https://github.com/kenn-io/agentsview",
+      "added": "2026-06-19"
+    },
+    {
+      "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+      "added": "2026-06-19"
+    },
+    {
+      "url": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+      "added": "2026-06-19"
+    },
+    {
+      "url": "https://cameronrwolfe.substack.com/p/stats-llm-evals",
+      "added": "2026-06-19"
     }
   ]
 }

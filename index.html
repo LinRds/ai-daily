@@ -41,22 +41,37 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-17</b> · 工具 + 深读(零新闻)· 3 工具</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>近三天合刊 · 06-17~06-19</b> · 工具 + 深读(零新闻)· 3 工具 + 3 深读</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:向量库 · 开源 Coding Agent · TTS/数字人</span></div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:AI 编程 · 代码上下文/记忆 · Agent 观测</span></div>
     <div class="note">来自 GitHub Trending,已查 star;前几天推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/alibaba/zvec" target="_blank"><span class="star">10.7k★</span> &nbsp;alibaba/zvec</a>
-        <div class="why">阿里开源的<b>轻量级 in-process 向量数据库</b>(类比"向量界的 SQLite",嵌进进程跑、免独立服务)——接你刚校准的 RAG 向量库重心,适合中小规模检索 / 本地原型,省掉 Milvus 那套部署。</div>
-        <div class="meta"><span class="tag">GitHub · 向量库</span></div></li>
-      <li><a href="https://github.com/langchain-ai/open-swe" target="_blank"><span class="star">10k★</span> &nbsp;langchain-ai/open-swe</a>
-        <div class="why">LangChain 昨天开源的<b>异步 coding agent 框架</b>(announcement 刚发):建在 LangGraph + Deep Agents 上,自带云沙箱、Slack/Linear 触发、<b>subagent 编排</b>、自动建 PR——Stripe/Ramp 那种"内部 coding agent"的开源版,正对你的 AI 开发工具 + agent 编排。</div>
-        <div class="meta"><span class="tag">GitHub · Coding Agent</span></div></li>
-      <li><a href="https://github.com/OpenBMB/VoxCPM" target="_blank"><span class="star">30.3k★</span> &nbsp;OpenBMB/VoxCPM</a>
-        <div class="why">Tokenizer-free 的多语种 TTS,支持音色设计 + <b>逼真克隆</b>——接你 tier-2 的 AI 虚拟人/数字人方向(语音那一环),做对话 avatar 的发声层可直接拿来试。</div>
-        <div class="meta"><span class="tag">GitHub · TTS/数字人</span></div></li>
+      <li><a href="https://github.com/Kilo-Org/kilocode" target="_blank"><span class="star">22.5k★</span> &nbsp;Kilo-Org/kilocode</a>
+        <div class="why">开源 AI coding agent,VS Code / JetBrains / CLI 都能跑,<b>500+ 模型自由切、按提供商原价零加价、免 API key 起步</b>——你找"合适的开源 AI 编程框架"那条线上的成熟选项。</div>
+        <div class="meta"><span class="tag">GitHub · AI 编程</span></div></li>
+      <li><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank"><span class="star">7.4k★</span> &nbsp;DeusData/codebase-memory-mcp</a>
+        <div class="why">用 tree-sitter 把整个代码库建成<b>持久知识图谱</b>(函数/类/调用链/路由),14 个 MCP 工具,毫秒级索引;实测比逐文件探索<b>少用 10× token、少 2.1× 工具调用</b>——同时打你的代码上下文 + Agent 记忆 + 上下文压缩(省 token)。</div>
+        <div class="meta"><span class="tag">GitHub · 代码上下文/记忆/MCP</span></div></li>
+      <li><a href="https://github.com/kenn-io/agentsview" target="_blank"><span class="star">2.9k★</span> &nbsp;kenn-io/agentsview</a>
+        <div class="why">Local-first 的 coding agent <b>session 分析/洞察</b>:把你跟 agent 的会话存下来做搜索、统计、复盘——接你"如何验证/评估 AI 产出"主线的本地观测工具(数据不出本机)。</div>
+        <div class="meta"><span class="tag">GitHub · Agent 观测/eval</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="grp">📚 深读 <span class="n">近三天优质源新文 + backlog</span></div>
+    <ol>
+      <li><a href="https://www.langchain.com/blog/the-art-of-loop-engineering" target="_blank">The Art of Loop Engineering — LangChain</a>
+        <div class="why">agent 不止"调工具直到完成"那一个 loop——这篇拆解支撑 agent 的<b>多层 loop 栈</b>怎么设计和 instrument。做复杂 agent 系统的控制流功底。</div>
+        <div class="meta"><span class="tag">LangChain · 06-16 · agent 开发 · EN</span></div></li>
+      <li><a href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank">Components of A Coding Agent — Sebastian Raschka</a>
+        <div class="why">拆 coding agent 的<b>六大组件</b>:工具、记忆、repo 上下文怎么协同让 LLM 在实战中更好用——一次覆盖你 agent 开发 + 记忆 + 上下文三个点的系统拆解(非论文清单帖)。</div>
+        <div class="meta"><span class="tag">Raschka · agent 架构 · EN</span></div></li>
+      <li><a href="https://cameronrwolfe.substack.com/p/stats-llm-evals" target="_blank">Applying Statistics to LLM Evaluations — Cameron Wolfe</a>
+        <div class="why">怎么用统计学严谨地读 eval 结果(显著性、置信区间、别被噪声骗)——给你"高效验证 AI 产出"主线补上"判断结论可不可信"的方法论底座。</div>
+        <div class="meta"><span class="tag">Cameron Wolfe · 验证/eval · EN</span></div></li>
     </ol>
   </section>
 
