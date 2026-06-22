@@ -240,6 +240,30 @@
     {
       "url": "https://cameronrwolfe.substack.com/p/stats-llm-evals",
       "added": "2026-06-19"
+    },
+    {
+      "url": "https://github.com/jamiepine/voicebox",
+      "added": "2026-06-22"
+    },
+    {
+      "url": "https://github.com/1jehuang/jcode",
+      "added": "2026-06-22"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "added": "2026-06-22"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "added": "2026-06-22"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/cybersecurity-evals",
+      "added": "2026-06-22"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/secure-source-code",
+      "added": "2026-06-22"
     }
   ]
 }
