@@ -41,37 +41,37 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-06-22</b> · 工具 + 深读(零新闻)· 2 工具 + 4 新文</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>近三天合刊 · 06-23~06-25</b> · 工具 + 深读(零新闻)· 3 工具 + 3 新文</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:语音/数字人 · Coding Agent</span></div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">分别命中:Agent+记忆 · 多 Agent 编排 · 造 Agent 团队</span></div>
     <div class="note">来自 GitHub Trending,已查 star;前几天推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/jamiepine/voicebox" target="_blank"><span class="star">31.6k★</span> &nbsp;jamiepine/voicebox</a>
-        <div class="why">开源 AI 语音工作室:<b>音色克隆</b>、口述转写、语音生成一体——接你 tier-2 的 AI 虚拟人/数字人方向,做对话 avatar 的发声/克隆环节可直接拿来试。</div>
-        <div class="meta"><span class="tag">GitHub · 语音/数字人</span></div></li>
-      <li><a href="https://github.com/1jehuang/jcode" target="_blank"><span class="star">7.5k★</span> &nbsp;1jehuang/jcode</a>
-        <div class="why">一个轻量的 <b>Coding Agent Harness</b>(agent 跑代码任务的脚手架)——正好对照今天 Anthropic 那篇 harness 设计,看一个最小可用的 coding agent 骨架怎么搭。</div>
-        <div class="meta"><span class="tag">GitHub · Coding Agent</span></div></li>
+      <li><a href="https://github.com/NousResearch/hermes-agent" target="_blank"><span class="star">202k★</span> &nbsp;NousResearch/hermes-agent</a>
+        <div class="why">Nous Research 的<b>自我改进 agent</b>:内置学习闭环——从经验里造 skill、用中迭代、主动持久化知识、检索自己的历史对话、跨会话<b>建立"你是谁"的模型</b>。几乎正中你全部核心:Agent 开发 + 记忆 + skills,且和你主业 ai_chat 的对话记忆高度同构。</div>
+        <div class="meta"><span class="tag">GitHub · Agent/记忆</span></div></li>
+      <li><a href="https://github.com/stablyai/orca" target="_blank"><span class="star">7.3k★</span> &nbsp;stablyai/orca</a>
+        <div class="why">面向"100x builder"的 AI 编排器 / ADE:同时驾驭<b>一队并行 agent</b>的开发环境——多 agent 编排与观测的实操工具。</div>
+        <div class="meta"><span class="tag">GitHub · 多 Agent 编排</span></div></li>
+      <li><a href="https://github.com/revfactory/harness" target="_blank"><span class="star">7.9k★</span> &nbsp;revfactory/harness</a>
+        <div class="why">Claude Code 的<b>"团队架构工厂"</b>:你说一句"给这个项目搭个 harness",它就按 6 种预设团队模式把你的领域描述变成一支 agent 团队 + 对应 skills——正接你 SDD + skills + 多 agent 的交叉点。</div>
+        <div class="meta"><span class="tag">GitHub · SDD/Agent 团队</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📰 优质源新文 <span class="n">🆕 Anthropic Engineering 首次纳入</span></div>
+    <div class="grp">📰 优质源新文 <span class="n">Anthropic Engineering backlog 轮换 + LangChain 新文</span></div>
     <ol>
-      <li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank">Effective context engineering for AI agents — Anthropic</a>
-        <div class="why">Anthropic 官方讲 agent 的<b>上下文工程</b>:怎么组织、压缩、取舍进窗内容——正是你 #1 在攻的主题,且是"压噪 + 压缩"双轨的权威范本。</div>
-        <div class="meta"><span class="tag">Anthropic Eng · 上下文工程 · EN</span></div></li>
-      <li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank">Demystifying evals for AI agents — Anthropic</a>
-        <div class="why">把 agent eval 讲透:该测什么、怎么搭、怎么读结果——你"如何高效验证 AI 产出正确性"主线的官方版方法论。</div>
+      <li><a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations" target="_blank">Designing AI-resistant technical evaluations — Anthropic</a>
+        <div class="why">怎么设计<b>让 AI 钻不了空子</b>的技术评测——直击你主线:要验证 AI 产出对不对,首先得有"AI 作弊不了"的题。对"高效验证 AI 代码"是地基级的一篇。</div>
         <div class="meta"><span class="tag">Anthropic Eng · 验证/eval · EN</span></div></li>
-      <li><a href="https://eugeneyan.com/writing/cybersecurity-evals" target="_blank">Patterns for Building Cybersecurity Evals — Eugene Yan</a>
-        <div class="why">昨天刚发:为安全场景搭 eval 的套路——eval 设计模式可直接迁移到你"验证 AI 代码/产出"的场景。</div>
-        <div class="meta"><span class="tag">Eugene Yan · 06-21 · eval · EN</span></div></li>
-      <li><a href="https://eugeneyan.com/writing/secure-source-code" target="_blank">Using LLMs to Secure Source Code — Eugene Yan</a>
-        <div class="why">用 LLM 审/加固源码——和你"高效判断 AI 写的代码对不对"是同一类问题:让模型来把关代码质量/安全,可借鉴它的 pipeline。</div>
-        <div class="meta"><span class="tag">Eugene Yan · AI+代码 · EN</span></div></li>
+      <li><a href="https://www.anthropic.com/engineering/code-execution-with-mcp" target="_blank">Code execution with MCP: building more efficient AI agents — Anthropic</a>
+        <div class="why">让 agent 通过<b>代码执行 + MCP</b> 来调工具,而不是把一堆工具结果塞进上下文——大幅省 token,正是你"上下文压缩 + 工具调用"的官方实践。</div>
+        <div class="meta"><span class="tag">Anthropic Eng · 上下文/MCP · EN</span></div></li>
+      <li><a href="https://www.langchain.com/blog/give-your-ai-agent-its-own-computer" target="_blank">Give your agent its own computer — LangChain</a>
+        <div class="why">给 agent 配一台自己的"电脑"(沙箱)去跑命令/写文件/装环境——computer-use 型 agent 的能力边界与落地方式,接你 agent 开发线。</div>
+        <div class="meta"><span class="tag">LangChain · 06-25 · agent 开发 · EN</span></div></li>
     </ol>
   </section>
 

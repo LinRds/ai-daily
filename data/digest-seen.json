@@ -264,6 +264,30 @@
     {
       "url": "https://eugeneyan.com/writing/secure-source-code",
       "added": "2026-06-22"
+    },
+    {
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "added": "2026-06-25"
+    },
+    {
+      "url": "https://github.com/stablyai/orca",
+      "added": "2026-06-25"
+    },
+    {
+      "url": "https://github.com/revfactory/harness",
+      "added": "2026-06-25"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+      "added": "2026-06-25"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "added": "2026-06-25"
+    },
+    {
+      "url": "https://www.langchain.com/blog/give-your-ai-agent-its-own-computer",
+      "added": "2026-06-25"
     }
   ]
 }
