@@ -288,6 +288,34 @@
     {
       "url": "https://www.langchain.com/blog/give-your-ai-agent-its-own-computer",
       "added": "2026-06-25"
+    },
+    {
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "added": "2026-07-07"
+    },
+    {
+      "url": "https://github.com/alibaba/page-agent",
+      "added": "2026-07-07"
+    },
+    {
+      "url": "https://github.com/gastownhall/gastown",
+      "added": "2026-07-07"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "added": "2026-07-07"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/building-c-compiler",
+      "added": "2026-07-07"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+      "added": "2026-07-07"
+    },
+    {
+      "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts",
+      "added": "2026-07-07"
     }
   ]
 }
