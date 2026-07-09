@@ -306,16 +306,36 @@
       "added": "2026-07-07"
     },
     {
-      "url": "https://www.anthropic.com/engineering/building-c-compiler",
-      "added": "2026-07-07"
-    },
-    {
-      "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
-      "added": "2026-07-07"
-    },
-    {
       "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts",
       "added": "2026-07-07"
+    },
+    {
+      "url": "https://baoyu.io/blog/2026-07-06/claudedevs-2074208949205881033",
+      "added": "2026-07-09"
+    },
+    {
+      "url": "https://www.langchain.com/blog/running-untrusted-agent-code-without-a-sandbox",
+      "added": "2026-07-09"
+    },
+    {
+      "url": "https://www.langchain.com/blog/evaluating-llms-with-openevals",
+      "added": "2026-07-09"
+    },
+    {
+      "url": "https://simonwillison.net/2026/Jun/29/ornith",
+      "added": "2026-07-09"
+    },
+    {
+      "url": "https://juejin.cn/post/7659034306872623156",
+      "added": "2026-07-09"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/llm-evaluators/",
+      "added": "2026-07-09"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "added": "2026-07-09"
     }
   ]
 }
