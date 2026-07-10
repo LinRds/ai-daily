@@ -42,68 +42,53 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>合刊 · 06-26~07-09</b> · 工具 + 新文 + 深读(零新闻)· 3 + 6 + 3</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-10 · 新源首秀</b> · 工具 + 新文 + 深读(零新闻)· 3 + 2 + 2</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">跨 Agent 委派+审代码 · 浏览器 GUI Agent · 多 Agent 工作台</span></div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">官方食谱 · MCP 终端控制 · 口袋 TTS</span></div>
     <div class="note">GitHub Trending(周+日榜),已查 star,推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/openai/codex-plugin-cc" target="_blank"><span class="star">26.5k★</span> &nbsp;openai/codex-plugin-cc</a>
-        <div class="why">OpenAI 官方插件:在 <b>Claude Code 里直接调 Codex</b> 审代码或代跑子任务——一条命令把活委派给另一个 agent 并让它 review。正接你<b>多 agent 编排</b> + <b>高效验证 AI 代码</b>(第二个模型当 verifier)。</div>
-        <div class="meta"><span class="tag">GitHub · Agent 委派/审代码</span></div></li>
-      <li><a href="https://github.com/alibaba/page-agent" target="_blank"><span class="star">24.8k★</span> &nbsp;alibaba/page-agent</a>
-        <div class="why">阿里的<b>浏览器内 GUI Agent</b>(纯 JS 注入页面):自然语言直接操控网页,不靠截图+坐标。接你 computer-use 落地线(比 cua 更轻、纯前端)。</div>
-        <div class="meta"><span class="tag">GitHub · 浏览器 Agent</span></div></li>
-      <li><a href="https://github.com/gastownhall/gastown" target="_blank"><span class="star">16.8k★</span> &nbsp;gastownhall/gastown</a>
-        <div class="why"><b>多 Agent 工作台管理器</b>:统一编排一堆并行 agent 的会话/工作区。和你主业(多轮、多会话、记忆)的编排层同构。</div>
-        <div class="meta"><span class="tag">GitHub · 多 Agent 编排</span></div></li>
+      <li><a href="https://github.com/anthropics/claude-cookbooks" target="_blank"><span class="star">47.2k★</span> &nbsp;anthropics/claude-cookbooks</a>
+        <div class="why">Anthropic 官方<b>食谱合集</b>:tool use、agent、检索、prompt、skills 的可跑 notebook。你做 agent/prompt 时最省事的一手参照,官方维护、更新快。</div>
+        <div class="meta"><span class="tag">GitHub · 官方 Agent/Prompt</span></div></li>
+      <li><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP" target="_blank"><span class="star">6.6k★</span> &nbsp;wonderwhy-er/DesktopCommanderMCP</a>
+        <div class="why">一个 <b>MCP server</b>,给 Claude <b>终端执行 + 文件系统搜索 + diff 改文件</b>的能力。接你 computer-use / MCP 落地线,想让 agent 真动手改本地代码时的现成底座。</div>
+        <div class="meta"><span class="tag">GitHub · MCP/computer-use</span></div></li>
+      <li><a href="https://github.com/kyutai-labs/pocket-tts" target="_blank"><span class="star">7.0k★</span> &nbsp;kyutai-labs/pocket-tts</a>
+        <div class="why">Kyutai 出的<b>能塞进 CPU 跑的 TTS</b>——不吃 GPU 的本地语音合成。给你数字人 / 语音那条一直没怎么喂到的线补一枪,做对话 avatar / 端侧语音可直接上手。</div>
+        <div class="meta"><span class="tag">GitHub · TTS/数字人</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📰 新文 · 真·近期 <span class="n">都在近 10 天 RSS 窗口内,带发布日期</span></div>
+    <div class="grp">📰 新文 · 真·近期 <span class="n">RSS 窗口内、带发布日期;本期两篇均来自新加的源</span></div>
     <ol>
-      <li><a href="https://baoyu.io/blog/2026-07-06/claudedevs-2074208949205881033" target="_blank">从零开始玩转循环(Getting started with loops)— Claude Code 团队 / 宝玉译</a>
-        <div class="why">Claude Code 团队讲<b>给编码 agent「设计循环」</b>:agentic loop、<code>/goal</code> 定义完成标准、<code>/loop</code>、<code>/schedule</code> 云端例行、裁判模型对抗审查。文里用 <b>SKILL.md 做端到端验证</b>(verify-frontend-change:"绝不能因代码改成功就报告完成")——<b>正是你 #1 主线「高效验证 AI 代码」</b>。命中 agent+harness+验证三线。</div>
-        <div class="meta"><span class="tag">宝玉/CC团队 · 07-06</span> <span class="tag">Agent/Harness/验证 · 中文</span></div></li>
-      <li><a href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts" target="_blank">Using DSPy to evaluate and improve Datasette Agent's SQL system prompt — Simon Willison</a>
-        <div class="why">Simon 的<b>实质长文</b>:用 <b>DSPy 自动评测 + 迭代优化</b> agent 的 SQL system prompt——提示词工程从手调转向"评测驱动自动优化"的可复制实操。</div>
-        <div class="meta"><span class="tag">Simon · 07-02</span> <span class="tag">提示词优化/eval · EN</span></div></li>
-      <li><a href="https://www.langchain.com/blog/running-untrusted-agent-code-without-a-sandbox" target="_blank">How Deep Agents Run Untrusted Code Without a Sandbox — LangChain</a>
-        <div class="why">agent 要跑自己写的/不可信代码又不想套重沙箱,怎么做隔离与权限边界——computer-use / 代码执行型 agent 的安全落地。</div>
-        <div class="meta"><span class="tag">LangChain · 06-30</span> <span class="tag">Agent 执行/安全 · EN</span></div></li>
-      <li><a href="https://www.langchain.com/blog/evaluating-llms-with-openevals" target="_blank">Evaluating Large Language Models With OpenEvals — LangChain</a>
-        <div class="why">用 <b>OpenEvals</b> 给 LLM/agent 搭评测:现成 evaluator、判分器、回归套件怎么组——接你 eval / 验证工具化这条线。</div>
-        <div class="meta"><span class="tag">LangChain · 06-30</span> <span class="tag">eval 框架 · EN</span></div></li>
-      <li><a href="https://simonwillison.net/2026/Jun/29/ornith" target="_blank">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding — Simon Willison</a>
-        <div class="why">让模型<b>自己给自己搭脚手架</b>再做 agentic coding 的新路子——agent 开发的新范式点。</div>
-        <div class="meta"><span class="tag">Simon · 06-29</span> <span class="tag">Agent 编码 · EN</span></div></li>
-      <li><a href="https://juejin.cn/post/7659034306872623156" target="_blank">工具塞满上下文窗口怎么办?深度拆解 AI Agent Tool Search 按需加载实现原理</a>
-        <div class="why">(中文精选,已验非标题党)工具太多塞爆上下文时,<b>按需加载/Tool Search</b> 怎么实现——MCP、Agent Loop、JSON Schema 逐层拆。正中你<b>上下文工程(压缩)</b>核心。</div>
-        <div class="meta"><span class="tag">掘金·中文精选</span> <span class="tag">上下文工程/工具 · 中文</span></div></li>
+      <li><a href="https://blog.vespa.ai/your-agent-wants-to-search-like-a-2010-quant" target="_blank">Your agent wants to search like a 2010 quant — Vespa</a>
+        <div class="why">agent 检索的"三个觉悟阶段":'24 的纯向量库(切块+embedding)→ 混合检索(BM25+向量)→ 像 quant 一样融合多路信号打分。<b>正中你 RAG 校准后的重点</b>:向量库、检索评测、hybrid/rerank 调优。新源 Vespa 首篇。</div>
+        <div class="meta"><span class="tag">Vespa · 07-07</span> <span class="tag">RAG/混合检索 · EN</span></div></li>
+      <li><a href="https://www.dbreunig.com/2026/07/03/ai-ecosytem-pace-layers.html" target="_blank">Understanding the Dynamics of the AI Ecosystem with Pace Layers — Drew Breunig</a>
+        <div class="why">用 Stewart Brand 的"<b>pace layers</b>"框架看 AI 生态:哪层变化快(模型/产品)、哪层慢(协议/习惯)——帮你判断"该押注在哪层、什么值得学、什么会被冲掉"。偏思维框架,换换口味。</div>
+        <div class="meta"><span class="tag">Drew Breunig · 07-03</span> <span class="tag">生态/框架 · EN</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📚 深读 · 常青轮换 <span class="n">不看日期,从存量金矿挑你没读过的;已标发表日期</span></div>
-    <div class="note">这栏刻意允许"旧但仍适用"的经典;快速过时的已剔除。</div>
+    <div class="grp">📚 深读 · 常青轮换 <span class="n">不看日期、已标发表日期;从新源存量里挑</span></div>
+    <div class="note">旧但仍适用的经典;快速过时的已剔除。</div>
     <ol>
-      <li><a href="https://eugeneyan.com/writing/llm-evaluators/" target="_blank">Evaluating the Evaluators: How to measure LLM-evaluators — Eugene Yan</a>
-        <div class="why">你用 LLM 当裁判去验证产出,<b>那这个裁判本身准不准怎么量</b>?对齐率、bias、校准全讲——直击你「高效验证」链条最容易被忽略的一环。</div>
-        <div class="meta"><span class="tag d">深读·常青</span> <span class="tag">LLM-as-judge/验证 · EN</span></div></li>
-      <li><a href="https://www.anthropic.com/engineering/contextual-retrieval" target="_blank">Introducing Contextual Retrieval — Anthropic</a>
-        <div class="why">检索前给每个 chunk 补<b>上下文再嵌入/建 BM25</b>,大幅降失败检索率——正中你 RAG 校准后的重点(检索调优 / chunking / rerank),经典且仍是基线打法。</div>
-        <div class="meta"><span class="tag d">深读·经典 2024</span> <span class="tag">RAG/检索调优 · EN</span></div></li>
-      <li><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps" target="_blank">Harness design for long-running application development — Anthropic</a>
-        <div class="why">给<b>长跑型开发 agent</b> 设计 harness:连续几十步不跑偏、可续跑、可验收。上期我误当"新文",其实是 03-24 旧文,但内容是你 agent+harness 线的干货,归到深读。</div>
-        <div class="meta"><span class="tag d">深读·2026-03</span> <span class="tag">Harness/Agent · EN</span></div></li>
+      <li><a href="https://www.dbreunig.com/2026/02/06/the-rise-of-spec-driven-development.html" target="_blank">The Rise of Spec Driven Development — Drew Breunig</a>
+        <div class="why">直接谈 <b>SDD(你自己撸过的那套)</b>:用 spec 驱动 coding agent、开源协作怎么变、以及"<b>最难的部分是写测试</b>"——把 spec/测试当正确性的 oracle,正是你「高效验证 AI 代码」的落点。新源 Breunig 存量金矿。</div>
+        <div class="meta"><span class="tag d">深读·2026-02</span> <span class="tag">SDD/验证 · EN</span></div></li>
+      <li><a href="https://blog.vespa.ai/re-autoresearching-msmarco-bm25-on-vespa" target="_blank">Re-autoresearching MSMARCO BM25, on Vespa — Vespa</a>
+        <div class="why">词法检索(BM25)回潮,作者<b>让 LLM 迭代 8 轮自动调一个 BM25 reranker</b>,在 MSMARCO 上看能提多少——检索评测 + 用 LLM 自动调检索参数,双押你 RAG 调优 + 自动化验证两条线。</div>
+        <div class="meta"><span class="tag d">深读·2026-05</span> <span class="tag">检索评测/BM25 · EN</span></div></li>
     </ol>
   </section>
 
   <footer>
     <b>三栏分工:</b>工具=Trending 热榜(查过 star);新文=近 10 天 RSS 窗口内、带真实日期;深读=存量常青好文轮换(不看日期、已标注、去重不重复)。<br>
-    不给新闻。已禁用:CSDN、IT之家、serving/推理基建层、融资/并购/发布报道。<br>
+    本期新接入 3 源:Drew Breunig(上下文/SDD)、Vespa(向量检索)、Shreya Shankar(eval)。不给新闻。已禁用:CSDN、IT之家、serving/推理基建层、融资/并购/发布报道。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>

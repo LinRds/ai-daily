@@ -336,6 +336,34 @@
     {
       "url": "https://www.anthropic.com/engineering/contextual-retrieval",
       "added": "2026-07-09"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "added": "2026-07-10"
+    },
+    {
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "added": "2026-07-10"
+    },
+    {
+      "url": "https://github.com/kyutai-labs/pocket-tts",
+      "added": "2026-07-10"
+    },
+    {
+      "url": "https://blog.vespa.ai/your-agent-wants-to-search-like-a-2010-quant",
+      "added": "2026-07-10"
+    },
+    {
+      "url": "https://www.dbreunig.com/2026/07/03/ai-ecosytem-pace-layers.html",
+      "added": "2026-07-10"
+    },
+    {
+      "url": "https://www.dbreunig.com/2026/02/06/the-rise-of-spec-driven-development.html",
+      "added": "2026-07-10"
+    },
+    {
+      "url": "https://blog.vespa.ai/re-autoresearching-msmarco-bm25-on-vespa",
+      "added": "2026-07-10"
     }
   ]
 }
