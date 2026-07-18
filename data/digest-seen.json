@@ -364,6 +364,38 @@
     {
       "url": "https://blog.vespa.ai/re-autoresearching-msmarco-bm25-on-vespa",
       "added": "2026-07-10"
+    },
+    {
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://github.com/davila7/claude-code-templates",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://baoyu.io/blog/2026-07-12/caveman-token-saving-test",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://www.dbreunig.com/2026/06/22/the-problem-is-prompt-debt.html",
+      "added": "2026-07-18"
+    },
+    {
+      "url": "https://hamel.dev/blog/posts/llm-judge/",
+      "added": "2026-07-18"
     }
   ]
 }

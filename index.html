@@ -25,13 +25,23 @@
   ol{list-style:none;margin:0;padding:0}
   li{background:var(--card);border:1px solid var(--line);border-radius:12px;
     padding:12px 14px;margin:0 0 9px}
-  li a{color:var(--fg);text-decoration:none;font-size:15.5px;font-weight:600;display:block}
-  li a:active{color:var(--accent)}
-  .why{color:var(--mut);font-size:13px;margin-top:4px}
+  li a.t{color:var(--fg);text-decoration:none;font-size:15.5px;font-weight:600;display:block}
+  li a.t:active{color:var(--accent)}
+  .sum{margin:8px 0 2px;font-size:13px;color:#d6dce6}
+  .sum .h{font-size:11.5px;color:var(--accent);font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+  .sum .b{padding-left:15px;position:relative;margin:4px 0}
+  .sum .b:before{content:"–";position:absolute;left:3px;color:var(--accent)}
+  .sum b{color:#fff;font-weight:600}
+  .rel{color:var(--mut);font-size:12.5px;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+  .rel b{color:#bcd0ff;font-weight:600}
   .meta{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .tag{background:var(--tag);color:var(--mut);font-size:11px;padding:2px 8px;border-radius:20px}
   .tag.d{color:#8fd4a0}
   .star{color:var(--gold);font-weight:700}
+  .flash{list-style:none;margin:0;padding:0}
+  .flash li{padding:9px 12px;margin:0 0 7px;font-size:13.5px;font-weight:400;color:#dfe4ec}
+  .flash li b{color:var(--fg);font-weight:600}
+  .flash .s{color:var(--mut);font-size:11px}
   footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px}
   footer a{color:var(--accent);text-decoration:none}
   .pill{display:inline-block;margin-top:10px;padding:8px 14px;border:1px solid var(--line);
@@ -42,53 +52,99 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-10 · 新源首秀</b> · 工具 + 新文 + 深读(零新闻)· 3 + 2 + 2</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>合刊 · 07-11~07-18</b> · 每篇带精华摘要,扫完再决定读不读 · 3 工具 + 5 文 + 快报</div>
   </header>
 
   <section>
-    <div class="grp">🛠️ 高 star 开源项目 <span class="n">官方食谱 · MCP 终端控制 · 口袋 TTS</span></div>
+    <div class="grp">🛠️ 高 star 开源项目 <span class="n">代码库图谱/评审 · CC 配置监控 · 可跑 Agent+RAG 应用</span></div>
     <div class="note">GitHub Trending(周+日榜),已查 star,推过的已去重。</div>
     <ol>
-      <li><a href="https://github.com/anthropics/claude-cookbooks" target="_blank"><span class="star">47.2k★</span> &nbsp;anthropics/claude-cookbooks</a>
-        <div class="why">Anthropic 官方<b>食谱合集</b>:tool use、agent、检索、prompt、skills 的可跑 notebook。你做 agent/prompt 时最省事的一手参照,官方维护、更新快。</div>
-        <div class="meta"><span class="tag">GitHub · 官方 Agent/Prompt</span></div></li>
-      <li><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP" target="_blank"><span class="star">6.6k★</span> &nbsp;wonderwhy-er/DesktopCommanderMCP</a>
-        <div class="why">一个 <b>MCP server</b>,给 Claude <b>终端执行 + 文件系统搜索 + diff 改文件</b>的能力。接你 computer-use / MCP 落地线,想让 agent 真动手改本地代码时的现成底座。</div>
-        <div class="meta"><span class="tag">GitHub · MCP/computer-use</span></div></li>
-      <li><a href="https://github.com/kyutai-labs/pocket-tts" target="_blank"><span class="star">7.0k★</span> &nbsp;kyutai-labs/pocket-tts</a>
-        <div class="why">Kyutai 出的<b>能塞进 CPU 跑的 TTS</b>——不吃 GPU 的本地语音合成。给你数字人 / 语音那条一直没怎么喂到的线补一枪,做对话 avatar / 端侧语音可直接上手。</div>
-        <div class="meta"><span class="tag">GitHub · TTS/数字人</span></div></li>
+      <li><a class="t" href="https://github.com/tirth8205/code-review-graph" target="_blank"><span class="star">19.8k★</span> &nbsp;tirth8205/code-review-graph</a>
+        <div class="rel"><b>为什么给你:</b>给代码库建持久智能图谱,让 AI 只读"该读的",评审 / 大仓工作流有实测的上下文削减基准。三押你核心:<b>代码评审验证 + 上下文压缩 + 代码库记忆</b>(MCP/CLI 皆可)。</div>
+        <div class="meta"><span class="tag">GitHub · 验证/上下文/记忆</span></div></li>
+      <li><a class="t" href="https://github.com/davila7/claude-code-templates" target="_blank"><span class="star">29.7k★</span> &nbsp;davila7/claude-code-templates</a>
+        <div class="rel"><b>为什么给你:</b>配置 + 监控 Claude Code 的 CLI,模板化搭 agent、看它在干什么。你天天用 CC,这类"把 CC 工程化/可观测"的工具直接提效。</div>
+        <div class="meta"><span class="tag">GitHub · CC 工具链</span></div></li>
+      <li><a class="t" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank"><span class="star">123.6k★</span> &nbsp;Shubhamsaboo/awesome-llm-apps</a>
+        <div class="rel"><b>为什么给你:</b>100+ 能直接 clone 跑起来的 Agent & RAG 应用(是可改可发的完整代码,不是链接盘点)。想快速抄一个 agent/RAG 骨架时的弹药库。</div>
+        <div class="meta"><span class="tag">GitHub · Agent/RAG 实例</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📰 新文 · 真·近期 <span class="n">RSS 窗口内、带发布日期;本期两篇均来自新加的源</span></div>
+    <div class="grp">📰 新文 · 真·近期 <span class="n">近 8 天窗口内、带发布日期</span></div>
     <ol>
-      <li><a href="https://blog.vespa.ai/your-agent-wants-to-search-like-a-2010-quant" target="_blank">Your agent wants to search like a 2010 quant — Vespa</a>
-        <div class="why">agent 检索的"三个觉悟阶段":'24 的纯向量库(切块+embedding)→ 混合检索(BM25+向量)→ 像 quant 一样融合多路信号打分。<b>正中你 RAG 校准后的重点</b>:向量库、检索评测、hybrid/rerank 调优。新源 Vespa 首篇。</div>
-        <div class="meta"><span class="tag">Vespa · 07-07</span> <span class="tag">RAG/混合检索 · EN</span></div></li>
-      <li><a href="https://www.dbreunig.com/2026/07/03/ai-ecosytem-pace-layers.html" target="_blank">Understanding the Dynamics of the AI Ecosystem with Pace Layers — Drew Breunig</a>
-        <div class="why">用 Stewart Brand 的"<b>pace layers</b>"框架看 AI 生态:哪层变化快(模型/产品)、哪层慢(协议/习惯)——帮你判断"该押注在哪层、什么值得学、什么会被冲掉"。偏思维框架,换换口味。</div>
-        <div class="meta"><span class="tag">Drew Breunig · 07-03</span> <span class="tag">生态/框架 · EN</span></div></li>
+      <li><a class="t" href="https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents" target="_blank">OpenWiki Brains: Proactive Memory for AI Agents — LangChain</a>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">把 OpenWiki(原本给代码库自动生成 wiki 的 OSS CLI)扩展成 agent 的<b>通用大脑</b>:连 Gmail / Notion / git / X / HN / web search,把这些信息<b>抓取并结构化成一个本地 wiki</b> 当记忆。</div>
+          <div class="b">与内置记忆的区别:内置记忆是被动记住你说过的事实;它是<b>主动去外部源拉取、组织成 wiki、并随时间刷新</b>。</div>
+          <div class="b">目的:agent 不必每次会话都把你的项目/兴趣/研究上下文复制进去,而是有个"持久可查"的地方。OSS,0.1.0。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>正中 agent 记忆线,和你 ai_chat 的对话记忆构建高度同构,可直接借它的"wiki-as-memory"架构。</div>
+        <div class="meta"><span class="tag">LangChain · 07-13</span> <span class="tag">Agent 记忆 · EN</span></div></li>
+
+      <li><a class="t" href="https://baoyu.io/blog/2026-07-12/caveman-token-saving-test" target="_blank">"母病速归"式 AI:号称省 65% Token,实测只有 8.5% — 宝玉</a>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">Caveman(19 岁学生做的项目,88.5k★):给 Claude Code/Codex 加一段提示词让 agent"<b>像原始人一样精简说话</b>",README 号称省 65% token。</div>
+          <div class="b">JetBrains 实测:跑 SkillsBench 的 86 个真实编程任务,装/不装各一遍,同任务同模型同预算,还<b>强制每次回复都压缩</b>(给它最好情况)→ <b>实际只省 8.5%</b>,已接近天花板(日常按需触发只会更少)。</div>
+          <div class="b">另一面:没测出明显任务质量下降。教训——"省 token"宣传数字和真实 agent 工作流差很远,要实测。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>双押你两条线——<b>上下文/token 压缩</b> + <b>"别听宣传、动手验证"</b>。评估一项压缩技巧真实收益的样本。</div>
+        <div class="meta"><span class="tag">宝玉 · 07-12</span> <span class="tag">压缩/实测验证 · 中文</span></div></li>
+
+      <li><a class="t" href="https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration" target="_blank">How I tricked Claude into leaking your secrets(web-fetch 外泄)— Simon Willison</a>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">Anthropic 的 web_fetch 本来防外泄:只准访问<b>用户亲手输入</b>或 web_search 返回的确切 URL,能挡住"把答案拼到 evil.com?answers= 再访问"这类攻击。</div>
+          <div class="b">漏洞(Ayush Paul 发现):web_fetch <b>还允许访问它此前抓过的页面里嵌的链接</b>→ 造蜜罐站,诱导 agent"一个字母一个字母"顺着嵌套链接走,把数据<b>逐字外带</b>。且只对 user-agent 含 Claude-User 的客户端显示,更难察觉。</div>
+          <div class="b">实测偷出用户姓名/城市/雇主。Anthropic 已封堵(禁止 web_fetch 跟进自身抓取内容里的新链接)。典型 lethal trifecta:私有数据 + 读外部指令 + 外发通道。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>你要做联网 / 会调工具的 agent,这就是最现实的<b>prompt injection + 数据外泄</b>风险与防线的活案例。</div>
+        <div class="meta"><span class="tag">Simon · 07-15</span> <span class="tag">Agent 安全/注入 · EN</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">📚 深读 · 常青轮换 <span class="n">不看日期、已标发表日期;从新源存量里挑</span></div>
+    <div class="grp">📚 深读 · 常青轮换 <span class="n">不看日期、已标发表日期</span></div>
     <div class="note">旧但仍适用的经典;快速过时的已剔除。</div>
     <ol>
-      <li><a href="https://www.dbreunig.com/2026/02/06/the-rise-of-spec-driven-development.html" target="_blank">The Rise of Spec Driven Development — Drew Breunig</a>
-        <div class="why">直接谈 <b>SDD(你自己撸过的那套)</b>:用 spec 驱动 coding agent、开源协作怎么变、以及"<b>最难的部分是写测试</b>"——把 spec/测试当正确性的 oracle,正是你「高效验证 AI 代码」的落点。新源 Breunig 存量金矿。</div>
-        <div class="meta"><span class="tag d">深读·2026-02</span> <span class="tag">SDD/验证 · EN</span></div></li>
-      <li><a href="https://blog.vespa.ai/re-autoresearching-msmarco-bm25-on-vespa" target="_blank">Re-autoresearching MSMARCO BM25, on Vespa — Vespa</a>
-        <div class="why">词法检索(BM25)回潮,作者<b>让 LLM 迭代 8 轮自动调一个 BM25 reranker</b>,在 MSMARCO 上看能提多少——检索评测 + 用 LLM 自动调检索参数,双押你 RAG 调优 + 自动化验证两条线。</div>
-        <div class="meta"><span class="tag d">深读·2026-05</span> <span class="tag">检索评测/BM25 · EN</span></div></li>
+      <li><a class="t" href="https://www.dbreunig.com/2026/06/22/the-problem-is-prompt-debt.html" target="_blank">The Problem is Prompt Debt — Drew Breunig</a>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">"<b>提示词债</b>":纯英文 prompt 让原型飞快,但作为<b>持久系统行为规范</b>很糟——同义不同词就产生不同输出。</div>
+          <div class="b">三症状:①迭代变慢(边界情况/全大写威胁越堆越多,举例 Fable 系统提示把版权指引重复了 6 次);②团队瘫痪(prompt 没人读得懂);③<b>锁死单一模型</b>(4o 上的 hotfix 换个模型就以新方式崩,于是不敢换)。</div>
+          <div class="b">结论:自然语言适合一次性任务/对话,不适合定义持久行为;要 model-agnostic 就别手调 prompt → 转向 <b>spec / 测试驱动</b>。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>直接接你的 SDD + 提示词工程——为什么该把行为规范从"堆 prompt"搬到 spec+测试。</div>
+        <div class="meta"><span class="tag d">深读·2026-06</span> <span class="tag">提示词工程/SDD · EN</span></div></li>
+
+      <li><a class="t" href="https://hamel.dev/blog/posts/llm-judge/" target="_blank">Creating a LLM-as-a-Judge That Drives Business Results — Hamel Husain</a>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">建 LLM 裁判的落地步骤:①找主领域专家 → ②建<b>多样化数据集</b> → ③让专家做<b>二元 pass/fail + critique</b>(别一上来搞多级打分)→ ④据此迭代裁判 prompt 直到与专家判断<b>收敛</b> → ⑤错误分析、分类 trace → ⑥必要时再拆专门化裁判。</div>
+          <div class="b">核心洞见:<b>critique(判错理由)比分数更值钱</b>;pass/fail 二元起步最有效;裁判必须持续和人工对齐。</div>
+          <div class="b">虽 2024,但 LLM-as-judge 方法论仍是当下标准做法。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>你用 LLM 当裁判去验证产出,这是最实的落地指南,直击「高效验证」链条。</div>
+        <div class="meta"><span class="tag d">深读·经典 2024</span> <span class="tag">LLM-as-judge/验证 · EN</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="grp">📣 每日快报 <span class="n">你之前排除的新闻,拉回来做速览(仅标题级,非精挑)</span></div>
+    <div class="note">机器粗筛的行业动态,一句一条,想深挖再自己搜。</div>
+    <ol class="flash">
+      <li><b>Kimi K3(Moonshot 开放权重)</b>号称比肩 OpenAI/Anthropic、登顶前端编码榜,点燃"开源 vs 闭源""美国会不会输掉 AI 竞赛"论战。<span class="s"> · BBC/NYT/Simon</span></li>
+      <li><b>OpenAI 发 GPT-5.6 家族</b>(Luna / Terra / Sol),并推出 <b>GPT-Live</b>。<span class="s"> · 07-09</span></li>
+      <li><b>Meta 拟向 Anthropic 出租算力</b>,交易金额可能高达 <b>$100 亿</b>。<span class="s"> · NYT/TNW</span></li>
+      <li><b>谷歌 Gemini 3.5 Pro 传"难产/叫停"</b>,发布推迟,市场情绪转冷。<span class="s"> · 36氪</span></li>
+      <li>AI 资本热:<b>Databricks 估值 $1880 亿</b>;推理芯片 <b>Etched</b> 传融资估值 ~$200 亿;医疗 AI <b>OpenEvidence</b> 估值升至 $200 亿。<span class="s"> · TechCrunch/Techmeme/36氪</span></li>
+      <li><b>苹果接洽模型压缩公司 PrismML</b>(号称把模型 54GB→4GB);另有苹果诉讼或搅动 OpenAI IPO。<span class="s"> · 36氪/TheVerge</span></li>
+      <li><b>WAIC 2026 + 习近平表态</b>:中国主推"开源 AI、进一步开放",数字员工/具身智能成会场热点。<span class="s"> · 量子位/NYT</span></li>
+      <li>安全与监管:<b>旧金山勒令苹果/谷歌下架 Nudify 类应用</b>;TikTok 测试 AI 肖像检测。<span class="s"> · ArsTechnica/TheVerge</span></li>
     </ol>
   </section>
 
   <footer>
-    <b>三栏分工:</b>工具=Trending 热榜(查过 star);新文=近 10 天 RSS 窗口内、带真实日期;深读=存量常青好文轮换(不看日期、已标注、去重不重复)。<br>
-    本期新接入 3 源:Drew Breunig(上下文/SDD)、Vespa(向量检索)、Shreya Shankar(eval)。不给新闻。已禁用:CSDN、IT之家、serving/推理基建层、融资/并购/发布报道。<br>
+    <b>四栏分工:</b>工具=Trending 热榜(查过 star);新文=近窗口内带真实日期;深读=存量常青好文轮换(标注日期、去重);<b>快报=机器粗筛的行业新闻速览</b>(你之前排除、现按你要求拉回,仅标题级)。<br>
+    每篇文章附精华摘要,先扫摘要再决定细读。已禁用:CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>
