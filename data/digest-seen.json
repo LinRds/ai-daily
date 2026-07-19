@@ -396,6 +396,26 @@
     {
       "url": "https://hamel.dev/blog/posts/llm-judge/",
       "added": "2026-07-18"
+    },
+    {
+      "url": "https://github.com/MoonshotAI/kimi-cli",
+      "added": "2026-07-19"
+    },
+    {
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "added": "2026-07-19"
+    },
+    {
+      "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+      "added": "2026-07-19"
+    },
+    {
+      "url": "https://eugeneyan.com/writing/evals/",
+      "added": "2026-07-19"
+    },
+    {
+      "url": "https://www.dbreunig.com/2026/02/25/two-things-i-believe-about-coding-agents.html",
+      "added": "2026-07-19"
     }
   ]
 }
