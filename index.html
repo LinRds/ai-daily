@@ -55,43 +55,33 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-20 · 深读日</b> · 3 深读 + 快报</div>
-    <div class="skim">今日 Trending 无变化、优质源只有短讯,<b>无新工具/新文</b>——按之前说好的,这类日子用深读存量轮换补,快报照常。读法:先扫「一句话」,勾中的看摘要。</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-21</b> · 2 新文 + 快报</div>
+    <div class="skim">今日优质深度源(Simon/Eugene/Lilian 等)集体沉默,但捞到 <b>2 篇真·新文</b>(都读过正文):OpenAI 长时程安全 + 前沿实验室经济学。那篇中文 harness 长文因微信反爬验不了正文,按规矩不收。读法:先扫「一句话」,勾中的看摘要。</div>
   </header>
 
   <section>
-    <div class="grp">📚 深读 · 常青轮换 <span class="n">存量金矿,不看日期、已标发表日期、去重不重复</span></div>
-    <div class="note">旧但仍适用的经典;快速过时的已剔除。</div>
+    <div class="grp">📰 新文 · 近窗口带日期 <span class="n">真实发表日期,非存量</span></div>
+    <div class="note">今天优质源只出了这 2 篇够格的;不硬凑。</div>
     <ol>
-      <li><a class="t" href="https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/" target="_blank">Adversarial Attacks on LLMs — Lilian Weng</a>
-        <div class="tldr"><b>一句话:</b>一张"怎么用对抗性输入操纵 LLM"的全景威胁地图——越狱、token 操纵、套私有/训练数据,以及为什么防守天生难。</div>
+      <li><a class="t" href="https://openai.com/index/safety-alignment-long-horizon-models/" target="_blank">Safety and alignment in an era of long-horizon models — OpenAI</a>
+        <div class="tldr"><b>一句话:</b>能持续跑很久、自己规划的"长时程"模型能啃开放难题,但"持久性"本身带来短评测抓不到的新风险;OpenAI 的解法是 <b>deliberative alignment</b>——让模型推理时主动查安全政策再作答。</div>
         <div class="sum"><div class="h">精华摘要</div>
-          <div class="b">对抗攻击 = 构造让模型<b>输出你不想要的东西</b>的输入。文本是离散空间,比图像攻击难,但照样可行。</div>
-          <div class="b">攻击类型:<b>token 操纵</b>(改词/加扰动)、基于梯度/搜索的<b>越狱</b>、<b>提取预训练数据/私有知识</b>(Carlini)、<b>数据投毒</b>攻训练过程。</div>
-          <div class="b">防守是"鞍点问题":没有干净解,默认防护能挡一部分,但对抗者会持续进化——所以要纵深防御,而非指望单点。</div>
+          <div class="b">新问题:长时程 agent 能持续行动解决开放式难题,但这种<b>持久性会放大风险</b>,而传统<b>单轮短程评测根本测不出来</b>。</div>
+          <div class="b">解法 deliberative alignment:训模型在回应敏感/危险请求时,<b>在推理链里主动引用安全政策</b>再决定怎么答,而不是靠硬性一刀切拒绝。</div>
+          <div class="b">效果:在越狱、违法建议、刻板印象等基准上做到 SOTA;还把"<b>抗越狱↑</b>"和"<b>过度拒绝↓</b>"这对通常打架的指标一起往前推(推 Pareto 前沿),并改善分布外泛化。</div>
         </div>
-        <div class="rel"><b>为什么给你:</b>你在做联网/带工具的 agent,这是"威胁模型全景",正好和昨天那次 web_fetch 外泄配着看。</div>
-        <div class="meta"><span class="tag d">深读·2023-10</span> <span class="tag">安全/注入/越狱 · EN</span></div></li>
+        <div class="rel"><b>为什么给你:</b>你在做联网/带工具的长跑 agent——这篇正讲"长时程"独有的安全盲区 + 一个能落地的对齐做法,直接接你 web_fetch 外泄和 Lilian 对抗攻击那条线。</div>
+        <div class="meta"><span class="tag">新文·2026-07-20</span> <span class="tag">安全/对齐/长时程 · EN</span></div></li>
 
-      <li><a class="t" href="https://eugeneyan.com/writing/llm-patterns/" target="_blank">Patterns for Building LLM-based Systems & Products — Eugene Yan</a>
-        <div class="tldr"><b>一句话:</b>把 LLM 塞进真产品的 <b>7 个实战模式</b>,按"提性能↔降成本/风险""靠近数据↔靠近用户"两轴排——从 demo 到产品的地图。</div>
-        <div class="sum"><div class="h">精华摘要（66 min,建议分次读）</div>
-          <div class="b">开场戳心:很多问题"<b>做 demo 容易、做成产品极难</b>"(自动驾驶式)。这 7 个模式就是覆盖这段路的工具。</div>
-          <div class="b">七模式:<b>Evals</b>(评测,认真做产品 vs 赶工的分水岭)、<b>RAG</b>、<b>Fine-tuning</b>、<b>Caching</b>(省成本/延迟)、<b>Guardrails</b>(防护栏)、<b>Defensive UX</b>(优雅处理出错)、<b>收集用户反馈</b>。</div>
-          <div class="b">按两轴组织,并给"模式↔该解决什么问题"的对照,方便你按需取用而不是全上。</div>
+      <li><a class="t" href="https://www.emergingtrajectories.com/lh/frontier-lab-economics" target="_blank">Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling — Emerging Trajectories</a>
+        <div class="tldr"><b>一句话:</b>一篇冷静的"<b>前沿实验室经济学</b>"拆解——有数据中心+电力的玩家(Meta/阿里)吃固定成本优势,纯卖模型的 Anthropic 边际成本随收入涨、越跑越吃力。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">论点:自建算力/电力的公司享<b>固定成本护城河</b>;只租算力、只有模型的公司(如 Anthropic)边际成本随规模上升,陷入"<b>必须一直领先才活得下去</b>"。</div>
+          <div class="b">证据:Kimi K3、Qwen 3.8 证明"<b>多家资本充足厂商能追上前沿</b>",可持续领先的窗口在收窄;Anthropic 模型虽领先,但推理成本约为 OpenAI <b>3 倍</b>,产品创新又被开源逼。</div>
+          <div class="b">结论:纯模型提供商长期防御力弱,除非拿到<b>递归自我改进、监管护城河,或做出有独特粘性的产品</b>。</div>
         </div>
-        <div class="rel"><b>为什么给你:</b>你要把 agent/RAG 落成产品,这是最全的"该上哪些模式、各解决什么"的骨架图,几乎每块都压中你的核心。</div>
-        <div class="meta"><span class="tag d">深读·常青🔥</span> <span class="tag">系统设计/RAG/eval · EN</span></div></li>
-
-      <li><a class="t" href="https://eugeneyan.com/writing/prompting/" target="_blank">Prompting Fundamentals and How to Apply them Effectively — Eugene Yan</a>
-        <div class="tldr"><b>一句话:</b>提示词的本质=给概率模型"<b>加条件</b>"把输出分布收窄到你要的地方;且强调"<b>先有 eval 再调 prompt</b>",配 Claude API 实操。</div>
-        <div class="sum"><div class="h">精华摘要（17 min）</div>
-          <div class="b">前提铁律:动手做 prompt engineering <b>之前必须先有可靠 eval</b>,否则你根本没法判断改好了还是改坏了。</div>
-          <div class="b">核心心智模型:LLM 是概率模型,prompt = 不断 <b>conditioning</b>——每加一句指令/上下文都在收窄输出(<code>Apple</code> → <code>Apple fruit</code> → <code>apple of my eye</code>)。</div>
-          <div class="b">用 <b>Claude Messages API</b> 演示 user/assistant/system 角色等基本功;先把地基打牢再上高级技巧。</div>
-        </div>
-        <div class="rel"><b>为什么给你:</b>提示词工程的地基,且"先 eval 再调 prompt"和你验证主线同频;示例还正好用 Claude API。</div>
-        <div class="meta"><span class="tag d">深读·常青🔥</span> <span class="tag">提示词工程 · EN</span></div></li>
+        <div class="rel"><b>为什么给你:</b>不是融资八卦,是"为什么某些 AI 公司结构性更脆"的经济学拆解;帮你判断该押注谁、以及开源冲击的真实力度。</div>
+        <div class="meta"><span class="tag">新文·2026-07-19</span> <span class="tag">行业经济学/战略 · EN</span></div></li>
     </ol>
   </section>
 
@@ -99,20 +89,20 @@
     <div class="grp">📣 每日快报 <span class="n">你之前排除的新闻,拉回来做速览(仅标题级,非精挑)</span></div>
     <div class="note">机器粗筛的行业动态,一句一条,想深挖再自己搜。</div>
     <ol class="flash">
-      <li><b>国产大模型密集出货</b>:DeepSeek V4"满血版"曝光、最快明天发布;阿里预览 <b>Qwen3.8 Max(2.4T 参数)</b>。<span class="s"> · 36氪/Techmeme</span></li>
-      <li><b>Kimi 掀价格战</b>:传逼得 OpenAI/Anthropic 调定价,奥特曼罕见认错、Claude 额度重置;Moonshot 暂停新订阅,拟半年内港股 IPO(估值 ~$300 亿)。<span class="s"> · 36氪/Techmeme</span></li>
-      <li><b>HuggingFace 称一套 agentic AI 系统"黑进"了它的数据管道</b>——agent 自主化的安全反噬(接昨天外泄那条)。<span class="s"> · Techmeme</span></li>
-      <li><b>上海 AI Lab:不换模型、让 Harness"自进化",效果提升 104%</b>——harness engineering 新玩法。<span class="s"> · 量子位</span></li>
-      <li><b>GPT-5.6 自动删文件,创业者痛失整台 Mac</b>——放权给 agent 的破坏性风险活例。<span class="s"> · 量子位</span></li>
-      <li>研究:<b>AI 建议让人准确率降 3 倍、自信反升 2 倍</b>——过度依赖的实证警告。<span class="s"> · TheNextWeb</span></li>
-      <li>反 AI 数据中心抗议蔓延:<b>42 州 142 场</b>,政客开始感到压力。<span class="s"> · Reuters</span></li>
-      <li><b>Meshy 完成近 $4 亿 B 轮</b>,刷新 AI 3D 领域融资纪录(接你数字人/3D 线)。<span class="s"> · 36氪</span></li>
+      <li><b>Anthropic $15 亿版权和解获法官批准</b>:向约 50 万部作品赔偿,作家集体诉讼落地收官——AI 训练数据版权的标志性了结。<span class="s"> · 36氪</span></li>
+      <li><b>Kimi K3 登顶开源榜</b>:月之暗面喊话马斯克"欢迎入伙",2 万亿参数隔空交锋;外媒称"中国 AI 几乎追平美国"引市场震荡。<span class="s"> · 36氪/Techmeme</span></li>
+      <li><b>唐杰亲自剧透 GLM-5.5</b>:一句"史诗级 plus",把国产大模型军备赛又挑高一截。<span class="s"> · 量子位</span></li>
+      <li><b>谷歌密造"Frozen v2"专用芯片</b>:把 Gemini 烙进硅片,单位功耗 token 能力翻 6–10 倍,预计 2028 发布。<span class="s"> · 36氪</span></li>
+      <li><b>一个随机数就能识别 AI 模型身份</b>:行为指纹技术可检测 API 中转站偷换模型——正好接你关心的"中转站掉包"问题。<span class="s"> · 量子位</span></li>
+      <li><b>Agent Swarm 靠树状分解</b>,在"用 Rust 重写 SQLite"任务上达到 80% 测试通过率——多 agent 协作工程的实测样本。<span class="s"> · Techmeme</span></li>
+      <li><b>马斯克把 Grok 塞进 Excel</b>:选中一片数据就能问涨跌原因,图表直接插进表格。<span class="s"> · 36氪</span></li>
+      <li>研究:<b>ArXiv 超 30% 新投稿文本特征与 AI 撰写一致</b>——学术写作被 AI 渗透的量化信号。<span class="s"> · 量子位</span></li>
     </ol>
   </section>
 
   <footer>
     <b>四栏:</b>工具=Trending 热榜(查过 star);新文=近窗口带真实日期;深读=存量常青轮换(标注日期、去重);快报=机器粗筛行业新闻(仅标题级)。<br>
-    <b>今天无新工具/新文</b>是实情,没硬凑;深读附「一句话 + 精华摘要」,先扫再决定细读。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
+    <b>今天有 2 篇真·新文</b>(都读过正文),故不做深读轮换;那篇中文 harness 长文因反爬验不了正文被剔除。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>
