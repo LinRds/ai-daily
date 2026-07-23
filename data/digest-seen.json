@@ -448,6 +448,14 @@
     {
       "url": "https://www.langchain.com/blog/how-apollo-rebuilt-its-ai-assistant-on-deep-agents-to-power-the-full-gtm-loop",
       "added": "2026-07-22"
+    },
+    {
+      "url": "https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok",
+      "added": "2026-07-23"
+    },
+    {
+      "url": "https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/",
+      "added": "2026-07-23"
     }
   ]
 }
