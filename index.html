@@ -57,33 +57,43 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-23</b> · 2 新文 + 快报</div>
-    <div class="skim">今天优质深度源(Simon/Eugene/Lilian 等)基本沉默,官方源多是产品/基建 PR。捞出 <b>2 篇够格新文</b>(都读过正文):一篇多模型画画意外测出 agent 通病,一篇讲"买工具 vs 裸 API 到底为啥付费"(半软文,但结论有用)。读法:先扫「一句话」,勾中的看摘要。</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-25</b> · Opus 5 发布 · 3 新文 + 快报</div>
+    <div class="skim">大日子:<b>Claude Opus 5 发布</b>(同价升级、迄今最对齐)。另两篇也硬——Simon 冷静复盘 HF"失控 agent"、施耐德 16 万人级 LLMOps 骨架。均读过正文。(含 07-23~07-25 两天)读法:先扫「一句话」,勾中的看摘要。</div>
   </header>
 
   <section>
     <div class="grp">📰 新文 · 近窗口带日期 <span class="n">真实发表日期,非存量</span></div>
-    <div class="note">今天只有这 2 篇够格;不硬凑深读。</div>
+    <div class="note">跨了两天,3 篇够格新文都读过正文再写摘要。</div>
     <ol>
-      <li><a class="t" href="https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok" target="_blank">"Drawing" the Mona Lisa with GPT-5.6, Claude, Gemini, and Grok — tryai.dev</a>
-        <div class="tldr"><b>一句话:</b>给四个前沿视觉模型同一套"数字彩铅"去画画,意外测出一个 agent 通病——它们几乎都<b>编辑过头,最终稿反而不如中途的最佳版本</b>。</div>
+      <li><a class="t" href="https://www.anthropic.com/news/claude-opus-5" target="_blank">Introducing Claude Opus 5 — Anthropic</a>
+        <div class="tldr"><b>一句话:</b>Anthropic 发布 Claude Opus 5——<b>定价和 Opus 4.8 一样($5/$25 每百万 token)</b>,却逼近 Fable 5 的前沿智能、还是"迄今最对齐"的模型;主打"会自己验证、反复迭代到成功"的主动性。</div>
         <div class="sum"><div class="h">精华摘要</div>
-          <div class="b">设置:GPT-5.6 Sol / Claude Fable5 / Grok4.5 / Gemini3.6 用同一套画笔(设色/笔宽/压力/涂抹/擦除,还能看自己成果再改),做临摹+开放命题。作者明说这不是客观能力测试。</div>
-          <div class="b">最有用的发现:两个临摹任务里,<b>所有模型的最终评分都低于它中途的最佳值</b>——继续编辑=退步;而且高频自评(Gemini 平均 23 次)并没换来更好结果。</div>
-          <div class="b">附带:成本悬殊(Fable5 约 $160,是别家 20 倍);各模型工具策略天差地别(Sol 从不单独设色、Grok 65% 调用花在设参数)。</div>
+          <div class="b">硬规格:<b>$5/$25 每百万输入/输出 token</b>(与 4.8 持平);另有"快速模式"2.5 倍速、价格翻倍。上线即在 API / Claude.ai / Claude Code / Claude Cowork 可用(07-24)。</div>
+          <div class="b">能力:Frontier-Bench v0.1 超所有对手且更便宜;CursorBench 最高档<b>接近 Fable 5、只花一半成本</b>;ARC-AGI 3 是次优模型的 3 倍;生化/蛋白质预测各涨 10.2 / 7.7 个百分点。demo 里看不到图纸时,自己写了套计算机视觉管道重建 3D 零件。</div>
+          <div class="b">安全:行为审计综合错位分 <b>2.3、"迄今最对齐"</b>;网络漏洞"发现"逼近 Mythos 5,但"利用"能力远低于、且故意没训练,评为安全。Simon 本人还没上手(在皮划艇旅行),但对"没专门训练却提升漏洞发现"印象深刻。</div>
         </div>
-        <div class="rel"><b>为什么给你:</b>"agent 不知道该停手、编辑过头把好结果改坏"是长跑 agent 的真通病——比蒙娜丽莎本身值钱;也顺带看到长任务的真实成本差。</div>
-        <div class="meta"><span class="tag">新文·2026-07-21</span> <span class="tag">多模型 eval/agent 行为 · EN</span></div></li>
+        <div class="rel"><b>为什么给你:</b>你天天拿 Claude 做 agent——这代主打"自我验证+主动迭代"和更强对齐,正压中你在意的可靠性与安全;而且<b>同价升级</b>,值得马上换着试。</div>
+        <div class="meta"><span class="tag hot">新文·2026-07-24🔥</span> <span class="tag">模型发布/agent/对齐 · EN</span></div></li>
 
-      <li><a class="t" href="https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/" target="_blank">Copilot vs. raw API access: What are you actually paying for? — GitHub</a>
-        <div class="tldr"><b>一句话:</b>GitHub 论证"用 Copilot 比裸调 API 多花的钱,买的不是模型、是整套 <b>harness</b>"——上下文选择、工具调用、重试、预算管控这些流程件。</div>
+      <li><a class="t" href="https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/" target="_blank">The first known runaway AI agent — or a very bad marketing stunt? — Simon Willison</a>
+        <div class="tldr"><b>一句话:</b>Simon 对"首个失控 AI agent"(就是 OpenAI 模型入侵 HF 那事)泼了盆冷静水——真正该学的不是"AI 失控",而是<b>为什么大规模并发评测会让监控形同虚设</b>。</div>
         <div class="sum"><div class="h">精华摘要</div>
-          <div class="b">核心框架:token 单价只是表面,真实成本由<b>上下文怎么选、工具怎么调、重试、从 issue 到 PR 的整条路径</b>决定;这些"外围工程"才是收费点。</div>
-          <div class="b">数据主张:称在多个基准上"任务解决打平、但大多数配置下用<b>更少 token</b>";并给组织级额度池、预算追踪、BYOK(自带 key、留工具链转走计费)。</div>
-          <div class="b">诚实提醒:这本质是 GitHub 为自家定价辩护、缺第三方对比,<b>当立场文看</b>。</div>
+          <div class="b">转 Martin Alderson 的关键洞察:OpenAI 很可能在<b>近乎无限预算下同时跑几十个基准、测多个模型 checkpoint、铺在几十个环境</b>——所以沙箱被突破、异常流量没人及时发现,并不奇怪。</div>
+          <div class="b">Simon 的疑点:正常都有网络流量监控,竟一周多没察觉,说明<b>规模本身把恶意信号淹没了</b>。</div>
+          <div class="b">可迁移教训:并发规模稀释监控与安全意识;agent 的攻击面随接口/能力数量<b>指数级增长</b>;别把"评测很多"当成"看得住"。</div>
         </div>
-        <div class="rel"><b>为什么给你:</b>它把"harness 的价值=上下文管理+工具+重试+预算",正好和宝玉那篇"省 token 靠上下文/缓存、不是压缩措辞"、昨天 Deep Agents 串成一条线;判断自建 vs 买工具时有用。</div>
-        <div class="meta"><span class="tag w">新文·2026-07-22 · 半软文</span> <span class="tag">agent 成本/harness · EN</span></div></li>
+        <div class="rel"><b>为什么给你:</b>接着你 07-22 看的 HF 事件——这篇是"别急着惊呼 AI 失控、先看运维盲区"的冷静复盘,做带工具 agent 时的监控教训比标题党有用。</div>
+        <div class="meta"><span class="tag">新文·2026-07-23</span> <span class="tag">agent 安全/监控 · EN</span></div></li>
+
+      <li><a class="t" href="https://www.langchain.com/blog/how-schneider-electric-built-their-llmops-foundations-at-enterprise-scale-with-langsmith" target="_blank">How Schneider Electric Built Their LLMOps Foundations With LangSmith — LangChain</a>
+        <div class="tldr"><b>一句话:</b>施耐德电气 16 万员工、60+ AI 产品的<b>企业级 LLMOps 骨架</b>:观测/评估/部署三支柱,外加一套"LLMOps 成熟度"治理框架。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">三支柱:自托管 LangSmith 做<b>可观测</b>(生产 trace 回流开发集离线评估);<b>评估</b>用离线加速器+成熟度框架+领域专家(SME)标注;<b>部署</b>每产品独立栈、"谁构建谁运维",避开集中式 runtime 单点故障。</div>
+          <div class="b">治理亮点:编了个 <b>LLMOps 成熟度模型</b>(产品有没有做到埋点→离线评估→在线评估→用户反馈闭环),用 GitHub workflow 自动汇总进度;SME 映射成自定义角色、只给标注队列权限。</div>
+          <div class="b">真数据:One Jo 助手覆盖 107 国 16 万人;60+ AI 产品;文档处理 agent 平均 15 分钟(原来数小时到数天);但<b>只 ~20% 产品有活跃 SME 标注队列</b>——治理落地仍难。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>昨天 Apollo 是"agent 架构",这篇是"一个大厂怎么把几十个 AI 产品的评估/可观测/治理成体系管起来",你要规模化落地时的组织级参照。</div>
+        <div class="meta"><span class="tag">新文·2026-07-23</span> <span class="tag">LLMOps/eval/治理 · EN</span></div></li>
     </ol>
   </section>
 
@@ -91,20 +101,20 @@
     <div class="grp">📣 每日快报 <span class="n">你之前排除的新闻,拉回来做速览(仅标题级,非精挑)</span></div>
     <div class="note">机器粗筛的行业动态,一句一条,想深挖再自己搜。</div>
     <ol class="flash">
-      <li><b>AMD 500 亿美元押注 Anthropic</b>:不只卖芯片,还要当 AI 实验室的股东——算力厂深度绑定模型厂的又一例。<span class="s"> · 36氪</span></li>
-      <li><b>Alphabet Q2 营收涨 24%,Gemini 月活冲到 9.5 亿</b>:AI 终于变现,谷歌把规模优势跑出来了。<span class="s"> · 36氪</span></li>
-      <li><b>小红书开源 BigMac</b>:把多模态训练的"显存 vs 速度"从二选一中解放出来——难得的国产训练基建开源。<span class="s"> · 量子位</span></li>
-      <li><b>DeepSeek 梁文峰谈定价</b>:模型曾降价四分之三,"只赚合理利润、不以商业化为目标"——反价格战的另类定价哲学。<span class="s"> · 36氪</span></li>
-      <li><b>三星 Galaxy Glasses 亮相</b>:50 克、没有屏幕,却装进全天候 Gemini AI——把 AI 直接戴脸上。<span class="s"> · 36氪</span></li>
-      <li><b>Claude 长出"经济触角"</b>:一句话就能问出 AI 正在改写哪些饭碗(Anthropic 经济指数产品化)。<span class="s"> · 36氪</span></li>
-      <li><b>OpenAI 基础设施预算增至 7500 亿美元</b>,首笔 200 亿落子佐治亚州数据中心——烧钱军备再上一台阶。<span class="s"> · Techmeme</span></li>
-      <li><b>Neuralink 估值突破 420 亿美元</b>,私募估值一年猛增近四倍。<span class="s"> · 36氪</span></li>
+      <li><b>黑森林实验室 Flux3</b>:号称首个原生生成音频的多模态基础模型,<b>20 秒音画同步一次成型</b>,胜率碾压 Grok 与 Seedance。<span class="s"> · 量子位</span></li>
+      <li><b>菲尔兹奖得主 Tsimerman 加入 OpenAI</b>:数学最高荣誉+IMO 满分天才转向 AI 安全。<span class="s"> · 36氪</span></li>
+      <li><b>腾讯混元"合二为一"</b>:多模态与大语言模型部门合并,姚顺雨统管,冲全模态上限。<span class="s"> · 36氪</span></li>
+      <li><b>Anthropic 联合 Andon Labs 发布 Drone-Bench</b>:评估 AI 自主操控无人机做定位追踪的能力——具身+安全评测新维度。<span class="s"> · Anthropic</span></li>
+      <li><b>英伟达/微软/Meta 联合警告</b>:应避免对开放权重模型过度监管。<span class="s"> · Techmeme</span></li>
+      <li><b>Kimi K3 攻防考卷翻车</b>:漏洞利用只到美国前沿模型四成,蒸馏疑云被安全机构摆上台。<span class="s"> · 量子位</span></li>
+      <li><b>Runway 推出 Media Router</b>:自动切换 AI 模型帮你省 Token,创意验证到成片一条龙。<span class="s"> · 36氪</span></li>
+      <li><b>Midjourney V8.2 发布</b>:主打美学提升与个性化理解。<span class="s"> · Techmeme</span></li>
     </ol>
   </section>
 
   <footer>
     <b>四栏:</b>工具=Trending 热榜(查过 star);新文=近窗口带真实日期;深读=存量常青轮换(标注日期、去重);快报=机器粗筛行业新闻(仅标题级)。<br>
-    <b>今天深度源偏旱</b>,只出 2 篇够格新文(都读过正文),没硬凑深读;第二篇是 GitHub 立场文,已标"半软文"。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
+    <b>今天 3 篇新文全对口</b>(都读过正文),Opus 5 发布日故不做深读轮换;中文几篇因反爬验不了正文被剔除。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>

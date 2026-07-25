@@ -456,6 +456,22 @@
     {
       "url": "https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/",
       "added": "2026-07-23"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "added": "2026-07-25"
+    },
+    {
+      "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/",
+      "added": "2026-07-25"
+    },
+    {
+      "url": "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/",
+      "added": "2026-07-25"
+    },
+    {
+      "url": "https://www.langchain.com/blog/how-schneider-electric-built-their-llmops-foundations-at-enterprise-scale-with-langsmith",
+      "added": "2026-07-25"
     }
   ]
 }
