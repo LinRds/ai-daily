@@ -57,8 +57,8 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-25</b> · Opus 5 发布 · 3 工具 + 3 新文 + 快报</div>
-    <div class="skim">大日子:<b>Claude Opus 5 发布</b>(同价升级、迄今最对齐)。另两篇也硬——Simon 冷静复盘 HF"失控 agent"、施耐德 16 万人级 LLMOps 骨架。工具栏已恢复常驻。均读过正文。(含 07-23~07-25 两天)读法:先扫「一句话」,勾中的看摘要。</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-25</b> · Opus 5 发布 · 3 工具 + 5 新文 + 快报</div>
+    <div class="skim">大日子:<b>Claude Opus 5 发布</b>(同价升级、迄今最对齐)。<b>新增 7 个信源已上线</b>,今天就补了两篇——Mollick《该用哪个 AI 干活》、Latent Space 深访 Poolside 造模型。另有 Simon 复盘 HF"失控 agent"、施耐德 LLMOps。工具栏已恢复常驻。均读过正文。(含 07-23~07-25)读法:先扫「一句话」,勾中的看摘要。</div>
   </header>
 
   <section>
@@ -84,7 +84,7 @@
 
   <section>
     <div class="grp">📰 新文 · 近窗口带日期 <span class="n">真实发表日期,非存量</span></div>
-    <div class="note">跨了两天,3 篇够格新文都读过正文再写摘要。</div>
+    <div class="note">跨了两天,5 篇够格新文都读过正文再写摘要(含新加源首供 2 篇)。</div>
     <ol>
       <li><a class="t" href="https://www.anthropic.com/news/claude-opus-5" target="_blank">Introducing Claude Opus 5 — Anthropic</a>
         <div class="tldr"><b>一句话:</b>Anthropic 发布 Claude Opus 5——<b>定价和 Opus 4.8 一样($5/$25 每百万 token)</b>,却逼近 Fable 5 的前沿智能、还是"迄今最对齐"的模型;主打"会自己验证、反复迭代到成功"的主动性。</div>
@@ -95,6 +95,26 @@
         </div>
         <div class="rel"><b>为什么给你:</b>你天天拿 Claude 做 agent——这代主打"自我验证+主动迭代"和更强对齐,正压中你在意的可靠性与安全;而且<b>同价升级</b>,值得马上换着试。</div>
         <div class="meta"><span class="tag hot">新文·2026-07-24🔥</span> <span class="tag">模型发布/agent/对齐 · EN</span></div></li>
+
+      <li><a class="t" href="https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22" target="_blank">An opinionated guide to which AI to use to do stuff — Ethan Mollick</a>
+        <div class="tldr"><b>一句话:</b>Mollick 的"该用哪个 AI 干哪种活"实操指南——干真活(要自动化、多小时产出)其实<b>只有两个选择:Claude 或 ChatGPT</b>。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">按风险分级选:低风险(食谱/常识)随便免费模型;高风险(医疗/法律)用 Claude Opus/Fable 或 GPT-5.6 Sol 并<b>开 High 思考档</b>;真·干活(自动化+多小时)只推 Claude 或 ChatGPT($20/月起)。</div>
+          <div class="b">心智模型:"<b>给 AI 一台电脑</b>"——平台级(Work/Cowork)vs 本地级(Codex/Code)差在算力与能不能啃多文件项目;<b>权限=风险管理</b>,默认"先问再动"防提示注入,涉及发送/花钱/删除必须人工批准。</div>
+          <div class="b">工作方式转变:从"聊天"变成"<b>像管理团队一样委派</b>"——提要求、审结果、要返工,而非简单接受或拒绝。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>你在挑模型/搭 agent,这是务实的"选型+权限+协作姿势"速查;"权限即风险管理、默认先问再动"正接你 web_fetch 外泄那条线。<b>(新加源 One Useful Thing 首供)</b></div>
+        <div class="meta"><span class="tag">新文·2026-07-23</span> <span class="tag">模型选型/AI 用法 · EN</span></div></li>
+
+      <li><a class="t" href="https://www.latent.space/p/poolside" target="_blank">Inside the Model Factory — Eiso Kant, Poolside (Latent Space)</a>
+        <div class="tldr"><b>一句话:</b>Poolside 的 Eiso Kant 拆"怎么工业化造前沿代码模型"——8 周从零训到发布 118B 的 Laguna S、打败大 10 倍的对手;秘诀不是更聪明,而是<b>"持久+验证+回溯"这些行为</b>。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">"造模型 <b>95% 是工程</b>":要么改进数据、要么提升算力效率;真突破常在代码质量/数据处理/实验管理,不在数学炫技。</div>
+          <div class="b">Model Factory=流水线:数据<b>即时"流入"训练</b>(不再打包-复制-同步)、不可变数据层+版本化代码=完全可复现;&lt;70 人月跑 1–2 万次实验,周期从 6 个月压到 5–8 周。</div>
+          <div class="b">行为&gt;参数量:小模型靠 RL 诱导"<b>验证-回溯-少预设</b>"就能胜任知识工作;前 30 分钟 checkpoint 就能预判最终效果;agent 上他主张"给模型代码执行自由 + <b>最小 harness</b>",而非塞 50 个系统提示工具。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>就算你不训模型,"流式数据&gt;批处理""行为(验证/回溯)比智能更关键""最小 harness+代码执行 vs 一堆工具"都能搬进你的 RAG/agent 工程;接昨天 Deep Agents、宝玉 harness 那条线。<b>(新加源 Latent Space 首供,非其 [AINews] 新闻)</b></div>
+        <div class="meta"><span class="tag">新文·2026-07-23</span> <span class="tag">模型工程/agent/RL · EN</span></div></li>
 
       <li><a class="t" href="https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/" target="_blank">The first known runaway AI agent — or a very bad marketing stunt? — Simon Willison</a>
         <div class="tldr"><b>一句话:</b>Simon 对"首个失控 AI agent"(就是 OpenAI 模型入侵 HF 那事)泼了盆冷静水——真正该学的不是"AI 失控",而是<b>为什么大规模并发评测会让监控形同虚设</b>。</div>
@@ -135,7 +155,7 @@
 
   <footer>
     <b>四栏:</b>工具=Trending 热榜(查过 star);新文=近窗口带真实日期;深读=存量常青轮换(标注日期、去重);快报=机器粗筛行业新闻(仅标题级)。<br>
-    <b>今天 3 篇新文全对口</b>(都读过正文),Opus 5 发布日故不做深读轮换;中文几篇因反爬验不了正文被剔除。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
+    <b>今天 5 篇新文全对口</b>(都读过正文,含新加源 One Useful Thing / Latent Space 首供),Opus 5 发布日故不做深读轮换;中文几篇因反爬验不了正文被剔除。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>
