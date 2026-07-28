@@ -488,6 +488,22 @@
     {
       "url": "https://www.debian.org/vote/2026/vote_002",
       "added": "2026-07-26"
+    },
+    {
+      "url": "https://www.philschmid.de/evocode-bench",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://importai.substack.com/p/import-ai-466-the-bitter-lesson-for",
+      "added": "2026-07-28"
     }
   ]
 }

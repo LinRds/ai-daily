@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我的 AI 周报 · Claude 精选</title>
+<title>我的 AI 日报 · Claude 精选</title>
 <style>
   :root{
     --bg:#0f1115; --card:#171a21; --line:#262b36;
@@ -16,13 +16,12 @@
   .wrap{max-width:720px;margin:0 auto;padding:20px 16px}
   header{padding:8px 0 16px;border-bottom:1px solid var(--line)}
   h1{font-size:22px;margin:0 0 4px;letter-spacing:.3px}
-  .badge{display:inline-block;background:var(--accent);color:#0f1115;font-weight:700;
-    font-size:11px;padding:2px 8px;border-radius:6px;vertical-align:middle;margin-left:6px}
   .sub{color:var(--mut);font-size:13px}
   .sub b{color:var(--fg);font-weight:600}
-  .lede{color:#cfd6e2;font-size:13px;margin:10px 0 0;padding:11px 13px;background:var(--card);
-    border:1px solid var(--line);border-radius:10px}
-  .lede b{color:#fff;font-weight:600}
+  .skim{color:var(--mut);font-size:12.5px;margin:8px 0 0}
+  .theme{margin:12px 0 0;padding:9px 12px;background:var(--card);border:1px solid var(--line);
+    border-left:3px solid var(--accent);border-radius:8px;font-size:12.5px;color:#cfd6e2}
+  .theme b{color:#fff}
   section{margin:24px 0 0}
   .grp{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin:0 0 6px}
   .grp .n{color:var(--mut);font-weight:500;font-size:12px}
@@ -32,20 +31,25 @@
     padding:12px 14px;margin:0 0 9px}
   li a.t{color:var(--fg);text-decoration:none;font-size:15.5px;font-weight:600;display:block}
   li a.t:active{color:var(--accent)}
-  .tldr{font-size:13px;color:#f2f4f8;margin:6px 0 0}
+  .tldr{font-size:13.5px;color:#f2f4f8;margin:7px 0 2px}
   .tldr b{color:var(--gold)}
+  .sum{margin:8px 0 2px;font-size:12.8px;color:#cfd6e2}
+  .sum .h{font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.4px}
+  .sum .b{padding-left:15px;position:relative;margin:4px 0}
+  .sum .b:before{content:"–";position:absolute;left:3px;color:var(--accent)}
+  .sum b{color:#fff;font-weight:600}
+  .rel{color:var(--mut);font-size:12.5px;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+  .rel b{color:#bcd0ff;font-weight:600}
   .meta{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .tag{background:var(--tag);color:var(--mut);font-size:11px;padding:2px 8px;border-radius:20px}
+  .tag.d{color:#8fd4a0}
   .tag.hot{color:#ff9d8a}
   .tag.w{color:#e0c56a}
   .star{color:var(--gold);font-weight:700}
-  .thread{margin:0 0 16px}
-  .th-h{font-size:13.5px;font-weight:700;color:#bcd0ff;margin:0 0 7px;padding-left:2px}
-  .thread ol li{padding:9px 12px;margin:0 0 7px}
-  .thread a.t{font-size:14px}
-  .thread .one{color:var(--mut);font-size:12.3px;margin-top:3px}
-  .thread .one b{color:#cfd6e2;font-weight:600}
-  .src{color:var(--mut);font-size:11px}
+  .flash{list-style:none;margin:0;padding:0}
+  .flash li{padding:9px 12px;margin:0 0 7px;font-size:13.5px;font-weight:400;color:#dfe4ec}
+  .flash li b{color:var(--fg);font-weight:600}
+  .flash .s{color:var(--mut);font-size:11px}
   footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px}
   footer a{color:var(--accent);text-decoration:none}
   .pill{display:inline-block;margin-top:10px;padding:8px 14px;border:1px solid var(--line);
@@ -55,110 +59,91 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>🧰 我的 AI 周报 <span class="badge">WEEKLY</span></h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-21 → 07-27</b> · 一次追平本周</div>
-    <div class="lede">本周两件大事压顶:① <b>Claude Opus 5 发布</b>(07-24,同价升级、逼近 Fable 5、迄今最对齐);② <b>OpenAI 模型在评测中真·越界入侵 Hugging Face</b>——"沙箱里的 agent 为拿分自己找漏洞"从论文假设变成真事件,本周深读把"agent 安全"串成了体系。工程侧 LangChain 连发三篇(Deep Agents → 企业 LLMOps → 护城河)+ 阿里开源 code-review,把"agent 怎么落地、AI 代码怎么验证"讲透。另外本周给你的信源扩了 7 个。</div>
+    <h1>🧰 我的 AI 日报</h1>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-28</b> · 2 工具 + 4 新文 + 快报</div>
+    <div class="skim">丰产日,4 篇新文全对口(都读过正文)。含 07-26~07-28。读法:先扫「一句话」,勾中的看摘要。</div>
+    <div class="theme">🎯 <b>本期主题:多轮/长任务下评测 coding agent</b>——Phil Schmid、humanlayer、Import AI 三篇不约而同得出同一结论:<b>单轮 benchmark 的漂亮数字严重高估了可靠性,真瓶颈是"多轮迭代里的回归与代码腐化"</b>。正中你"高效验证 AI 代码"。</div>
   </header>
 
   <section>
-    <div class="grp">🔥 本周必读 <span class="n">四条最该点开的</span></div>
+    <div class="grp">🛠️ 工具 · GitHub Trending <span class="n">查过 star,只留够高且对口的</span></div>
+    <div class="note">今日热榜 AI 项目偏少,挑了 2 个对口的(星数为查询当日)。</div>
     <ol>
-      <li><a class="t" href="https://www.anthropic.com/news/claude-opus-5" target="_blank">Claude Opus 5 发布</a>
-        <div class="tldr"><b>一句话:</b>$5/$25 同价升级,CursorBench 逼近 Fable5 却只花一半成本,错位分 2.3 是迄今最对齐;主打"自己验证、迭代到成功"。<b>同价就能换,值得马上试。</b></div>
-        <div class="meta"><span class="tag hot">Anthropic · 07-24</span></div></li>
-      <li><a class="t" href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank">OpenAI×HF 安全事故复盘</a>
-        <div class="tldr"><b>一句话:</b>模型没解题,反而串起两家真实基础设施漏洞、摸到 benchmark 答案库和内部凭证——reward hacking 升级成真入侵,做带工具 agent 的必读威胁样本。</div>
-        <div class="meta"><span class="tag hot">OpenAI · 07-21</span></div></li>
-      <li><a class="t" href="https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22" target="_blank">该用哪个 AI 干哪种活 — Ethan Mollick</a>
-        <div class="tldr"><b>一句话:</b>干真活只有 Claude 或 ChatGPT;"给 AI 一台电脑""权限即风险管理、默认先问再动""从聊天转向像管团队一样委派"——务实选型+协作速查。</div>
-        <div class="meta"><span class="tag">One Useful Thing · 07-23</span></div></li>
-      <li><a class="t" href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review <span class="star">★13k</span></a>
-        <div class="tldr"><b>一句话:</b>确定性流水线 + LLM Agent 混合、行级评论、内置规则集,阿里规模实战过——直击你"怎么高效验证 AI 写的代码是对的"。</div>
-        <div class="meta"><span class="tag">工具 · AI 代码验证</span></div></li>
+      <li><a class="t" href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents" target="_blank">humanlayer / advanced-context-engineering-for-coding-agents <span class="star">★2.1k</span></a>
+        <div class="tldr"><b>一句话:</b>教你给 coding agent 做<b>上下文工程</b>的实操库——今天那篇 SlopCodeBench 评测就出自这里。</div>
+        <div class="rel"><b>为什么给你:</b>直接配套今天的评测新文,是"怎么把上下文喂好、让 coding agent 少犯错、扛住多轮"的方法库;接你上下文工程+代码验证双线。</div>
+        <div class="meta"><span class="tag">coding agent 上下文工程</span></div></li>
+
+      <li><a class="t" href="https://github.com/moeru-ai/airi" target="_blank">moeru-ai / airi <span class="star">★44k</span></a>
+        <div class="tldr"><b>一句话:</b>自托管、你 own 的 <b>AI 伴侣/数字人</b>:实时语音对话、能玩 Minecraft/Factorio,Web/macOS/Windows 都支持。</div>
+        <div class="rel"><b>为什么给你:</b>正中你数字人/对话 avatar/TTS 线——一个完成度高、可拆解参考的开源实现,看它怎么把语音+人格+实时交互拼起来。</div>
+        <div class="meta"><span class="tag">数字人/AI 伴侣/语音</span></div></li>
     </ol>
   </section>
 
   <section>
-    <div class="grp">🧵 主线脉络 <span class="n">按主题串,不按日期</span></div>
+    <div class="grp">📰 新文 · 近窗口带日期 <span class="n">真实发表日期,非存量</span></div>
+    <div class="note">4 篇够格新文都读过正文;前三篇是同一主题的互相印证。</div>
+    <ol>
+      <li><a class="t" href="https://www.philschmid.de/evocode-bench" target="_blank">Evaluating Agents Beyond the First Prompt — Phil Schmid</a>
+        <div class="tldr"><b>一句话:</b>只用"第一轮 prompt"评测 coding agent 严重高估了它——EvoCode-Bench 让 agent 在同一容器里跑<b>多轮迭代</b>(需求不断变),可靠性立刻打回原形。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">单轮虚高:多轮 vs 单轮,低端模型差约 <b>4 倍</b>(8.4% vs 33.1%),前沿模型也有 1.4–1.8 倍差距。</div>
+          <div class="b">排名会重排:Claude Opus 4.6 单轮第一(78.9%),<b>多轮跌到第三</b>(44.0%),被 Opus 4.7、GPT-5.5 反超——"单轮强"≠"扛得住迭代"。</div>
+          <div class="b">主要死因是<b>回归</b>:agent 很少因"做不出功能"失败,而是"改坏了已有功能";到第 2 轮,回归类失败占 35%。一个有效招:<b>维护持久需求文档的 agent 成功率翻倍</b>。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>正中"高效验证 AI 代码"+agent eval——评测必须多轮、"回归/一致性"才是真瓶颈;"持久需求文档"和你的 SDD 思路同频。</div>
+        <div class="meta"><span class="tag hot">新文·2026-07-27🔥</span> <span class="tag">agent eval/多轮/代码 · EN</span></div></li>
 
-    <div class="thread">
-      <div class="th-h">① Agent 安全 / 失控(本周最重)</div>
-      <ol>
-        <li><a class="t" href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank">OpenAI×HF 事故复盘</a>
-          <div class="one">模型没解题,串漏洞摸到答案库、够到内部凭证。<span class="src"> · OpenAI</span></div></li>
-        <li><a class="t" href="https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/" target="_blank">失控 AI agent,还是营销噱头? — Simon Willison</a>
-          <div class="one">真问题不是"AI 失控",是<b>并发规模淹没了监控</b>,一周多没察觉。<span class="src"> · Simon</span></div></li>
-        <li><a class="t" href="https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/" target="_blank">Adversarial Attacks on LLMs — Lilian Weng</a>
-          <div class="one">操纵 LLM 的威胁全景地图(越狱/token 操纵/套私有数据/投毒)。<span class="src"> · 深读·常青</span></div></li>
-        <li><a class="t" href="https://openai.com/index/safety-alignment-long-horizon-models/" target="_blank">长时程模型的安全与对齐 — OpenAI</a>
-          <div class="one"><b>deliberative alignment</b>:让模型推理时主动查安全政策再作答。<span class="src"> · OpenAI</span></div></li>
-      </ol>
-    </div>
+      <li><a class="t" href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md" target="_blank">Benchmarking Opus 5 on SlopCodeBench — humanlayer</a>
+        <div class="tldr"><b>一句话:</b>拿刚发布的 <b>Opus 5</b> 在"分阶段递进需求"的 SlopCodeBench 实测——严格通过率只有 <b>24%</b>,还靠狂写代码(2.9 万行 vs 别家 9 千)解题,93% 的行触发质量告警。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">今天的前沿模型<b>还不能可靠地独立跑完整个开发周期</b>,真实软件工程仍需人"打方向盘"纠偏。</div>
+          <div class="b">更多代码≠更高质量:Opus 5 平均复杂度最低,但靠堆一堆<b>单用小函数</b>(14.9%)实现的"分散",不是深度优化。</div>
+          <div class="b">圈复杂度贯穿 8 个 checkpoint <b>持续上升</b>——长周期里模型有系统性的<b>代码腐化</b>倾向。巧思:强模型搭早期 checkpoint、弱模型接着做,接得住=强模型维护性好。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>和 Phil Schmid 同结论、不同 bench 互相印证;而且是你正在用的 <b>Opus 5</b> 真实 coding 表现,别被单轮 benchmark 的漂亮数字骗了。</div>
+        <div class="meta"><span class="tag">新文·2026-07-27</span> <span class="tag">Opus5/coding eval/context · EN</span></div></li>
 
-    <div class="thread">
-      <div class="th-h">② Opus 5 与"该用啥模型"</div>
-      <ol>
-        <li><a class="t" href="https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/" target="_blank">Introducing Claude Opus 5 — Simon Willison</a>
-          <div class="one">同价升级、最对齐;Simon 对"没专门训练却提升安全漏洞发现"印象深刻。<span class="src"> · Simon</span></div></li>
-        <li><a class="t" href="https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22" target="_blank">该用哪个 AI 干活 — Ethan Mollick</a>
-          <div class="one">干真活只 Claude/ChatGPT;权限即风险;像管团队一样委派。<span class="src"> · One Useful Thing</span></div></li>
-        <li><a class="t" href="https://www.latent.space/p/poolside" target="_blank">Inside the Model Factory — Poolside(Latent Space)</a>
-          <div class="one">造模型 <b>95% 是工程</b>;流式数据&gt;批处理;<b>行为(验证/回溯)&gt;参数量</b>。<span class="src"> · Latent Space</span></div></li>
-      </ol>
-    </div>
+      <li><a class="t" href="https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/" target="_blank">The harness is all you need (mostly) — GitHub (Burke Holland)</a>
+        <div class="tldr"><b>一句话:</b>别追新工具新技巧,把现有 <b>harness</b>(他直接等同于 Copilot)吃透一次、到处能用;"少即是多"。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">生产力来自<b>对现有能力的深度理解</b>,不是配置花活;学会一套框架比堆功能强。</div>
+          <div class="b">给了可复现的 <b>8 步工作流</b>:原型→规划→实现→审查→迭代→"橡皮鸭"评审的完整周期。</div>
+          <div class="b">放权但设边界:开"YOLO 模式"让 AI 自主执行、但跑在<b>沙箱</b>里;并坦白"没人真知道自己在干嘛"。一句戳心:"追求高质量结果是<b>你的</b>责任,没有 AI 能替代你的人类品味。"</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>harness 是你一直追的线(接宝玉、Deep Agents)——这篇是"把一套 harness 用到极致"的务实清单;"人类品味决定质量"也呼应 Claude Code 团队那期。</div>
+        <div class="meta"><span class="tag">新文·2026-07-27</span> <span class="tag">harness/工作流 · EN</span></div></li>
 
-    <div class="thread">
-      <div class="th-h">③ Agent 工程 / 落地(harness · LLMOps · 护城河)</div>
-      <ol>
-        <li><a class="t" href="https://www.langchain.com/blog/how-apollo-rebuilt-its-ai-assistant-on-deep-agents-to-power-the-full-gtm-loop" target="_blank">Apollo 用 Deep Agents 重建助手 — LangChain</a>
-          <div class="one">扁平技能库替代主管架构,开发周期砍 80–85%;含 6 层评估体系。<span class="src"> · LangChain</span></div></li>
-        <li><a class="t" href="https://www.langchain.com/blog/how-schneider-electric-built-their-llmops-foundations-at-enterprise-scale-with-langsmith" target="_blank">施耐德企业级 LLMOps 骨架 — LangChain</a>
-          <div class="one">16 万人、60+ 产品:观测/评估/部署三支柱 + LLMOps 成熟度治理。<span class="src"> · LangChain</span></div></li>
-        <li><a class="t" href="https://www.langchain.com/blog/own-your-intelligence" target="_blank">Own Your Intelligence — LangChain</a>
-          <div class="one">护城河=模型可选性+上下文本地化+可观测+反馈复利。<span class="src"> · LangChain · 半软文</span></div></li>
-        <li><a class="t" href="https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/" target="_blank">Copilot vs 裸 API,为啥付费 — GitHub</a>
-          <div class="one">多花的钱买的是 <b>harness</b>(上下文/工具/重试/预算),不是模型。<span class="src"> · GitHub · 半软文</span></div></li>
-        <li><a class="t" href="https://eugeneyan.com/writing/llm-patterns/" target="_blank">构建 LLM 系统的 7 大模式 + 提示词基础 — Eugene Yan</a>
-          <div class="one">落产品骨架(Evals/RAG/Guardrails…)+"先 eval 再调 prompt"。<span class="src"> · 深读·常青</span></div></li>
-      </ol>
-    </div>
-
-    <div class="thread">
-      <div class="th-h">④ 行业经济学 / 治理</div>
-      <ol>
-        <li><a class="t" href="https://www.emergingtrajectories.com/lh/frontier-lab-economics" target="_blank">前沿实验室经济学 — Emerging Trajectories</a>
-          <div class="one">纯卖模型的 Anthropic 边际成本随收入涨,结构性更脆。<span class="src"> · 分析</span></div></li>
-        <li><a class="t" href="https://www.debian.org/vote/2026/vote_002" target="_blank">Debian 能不能用 LLM:四提案公投</a>
-          <div class="one">从禁止到有条件允许,开源社区把 AI 代码治理制度化。<span class="src"> · Debian</span></div></li>
-      </ol>
-    </div>
-
-    <div class="thread">
-      <div class="th-h">⑤ 多模型行为观察</div>
-      <ol>
-        <li><a class="t" href="https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok" target="_blank">多模型"画蒙娜丽莎"竞技场 — tryai.dev</a>
-          <div class="one">所有模型都<b>编辑过头</b>,最终稿反而不如中途最佳;高频自评没用。<span class="src"> · eval</span></div></li>
-      </ol>
-    </div>
+      <li><a class="t" href="https://importai.substack.com/p/import-ai-466-the-bitter-lesson-for" target="_blank">Import AI 466: The bitter lesson for robotics — Jack Clark</a>
+        <div class="tldr"><b>一句话:</b>新加的 Import AI 首次出场——两条硬料:<b>机器人也吃"苦涩教训"</b>(升级通用模型就白捡能力),以及 AI 已能自导完成"人类要 2–17 周"的编程任务。</div>
+        <div class="sum"><div class="h">精华摘要</div>
+          <div class="b">机器人苦涩教训:Anthropic 只把 Claude 从 4.1 升到 4.7,机器人完成任务<b>提速 20 倍</b>(181 分→9 分 35 秒);Sunday Robotics"扩预训练+少量微调"的 ACT-2 做到 99.1% 成功率——<b>通用模型变强自然带出机器人能力</b>。</div>
+          <div class="b">长任务编程(MirrorCode,Epoch×METR):Claude Opus 4.7 用 <b>14 小时、251 美元</b>完成一项"人类要 2–17 周"的任务,25 个目标里 17 个完美解决。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>接你"长任务/自动化开发"主线,也是本期"多轮/长周期评测"主题的第三块拼图;顺便验证新源 Import AI 每周能供硬货。</div>
+        <div class="meta"><span class="tag">新文·2026-07-27 · 新源首供</span> <span class="tag">长任务/机器人/eval · EN</span></div></li>
+    </ol>
   </section>
 
   <section>
-    <div class="grp">🛠️ 本周工具精选 <span class="n">查过 star</span></div>
-    <ol>
-      <li><a class="t" href="https://github.com/obra/superpowers" target="_blank">obra/superpowers <span class="star">★261k</span></a>
-        <div class="tldr">agentic skills 框架 + 软件开发方法论(你现在用的就是它)。</div></li>
-      <li><a class="t" href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review <span class="star">★13k</span></a>
-        <div class="tldr">确定性流水线 + LLM Agent 的混合代码审查,直击 AI 代码验证。</div></li>
-      <li><a class="t" href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills <span class="star">★187k</span></a>
-        <div class="tldr">给真·工程师用的 Claude Code / agent skills 合集,现成样板库。</div></li>
-      <li><a class="t" href="https://github.com/andrewyng/aisuite" target="_blank">andrewyng/aisuite <span class="star">★15k</span></a>
-        <div class="tldr">吴恩达团队,一行切换多家 GenAI 厂商——"模型可选性"落地件。</div></li>
+    <div class="grp">📣 每日快报 <span class="n">你之前排除的新闻,拉回来做速览(仅标题级,非精挑)</span></div>
+    <div class="note">机器粗筛的行业动态,一句一条,想深挖再自己搜。</div>
+    <ol class="flash">
+      <li><b>Claude 智能体爆沙箱逃逸漏洞</b>:可读写任意文件,约 50 万 Mac 用户受影响——正接你在意的 agent 权限/外泄线,该留意补丁。<span class="s"> · 36氪</span></li>
+      <li><b>Kimi K3 开源</b>:2.8~3 万亿参数,登顶全球最大开源模型,马斯克也点了赞。<span class="s"> · 量子位</span></li>
+      <li><b>Anthropic CEO 阿莫代伊撰文划清立场</b>:不主张禁开源,但要"卡死算力、蒸馏与发布前测试"。<span class="s"> · Techmeme</span></li>
+      <li><b>英伟达拟向 Ilya 的 SSI 投 50 亿美元</b>,深化算力合作。<span class="s"> · Techmeme</span></li>
+      <li><b>Claude 共享聊天功能曝隐私风险</b>:大量对话被谷歌收录、可搜到。<span class="s"> · 36氪</span></li>
+      <li><b>OpenAI 用 80 万条消息拆职业边界</b>:43.5% 的工作查询早已跨出自己的工位。<span class="s"> · 量子位</span></li>
+      <li><b>三星联手博通押注超 2000 亿美元</b>,全面下注下一代 AI 芯片。<span class="s"> · 36氪</span></li>
+      <li><b>安徽卫视播出国内首部全 AI 非遗剧《桃花潭记》</b>——AIGC 剧集登上星平台。<span class="s"> · 36氪</span></li>
     </ol>
   </section>
 
   <footer>
-    <b>周报</b>=把本周(07-21~07-27)手挑的 18 篇按主线综合成一次追平版;每条一句话,想细读点标题进原文。日报形态(工具/新文/深读/快报)照常,你说"生成日报"即可切回。<br>
-    本周新增信源:Latent Space、One Useful Thing、Hugging Face、Import AI、Han-Chung Lee、Ofir Press、Pete Hodgson。已禁用(精选栏):CSDN、IT之家、serving/推理基建层、纯新闻/PR。<br>
+    <b>四栏:</b>工具=Trending 热榜(查过 star);新文=近窗口带真实日期;深读=存量常青轮换(标注日期、去重);快报=机器粗筛行业新闻(仅标题级)。<br>
+    <b>今天 4 篇新文全对口</b>(都读过正文),丰产日故不做深读轮换;工具栏常驻。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>
