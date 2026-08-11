@@ -38,6 +38,8 @@
   .sum .b{padding-left:15px;position:relative;margin:4px 0}
   .sum .b:before{content:"–";position:absolute;left:3px;color:var(--accent)}
   .sum b{color:#fff;font-weight:600}
+  .sum a{color:var(--accent);text-decoration:none;font-weight:600}
+  .sum a .star{font-weight:700}
   .rel{color:var(--mut);font-size:12.5px;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
   .rel b{color:#bcd0ff;font-weight:600}
   .meta{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
@@ -60,8 +62,8 @@
 <div class="wrap">
   <header>
     <h1>🧰 我的 AI 日报</h1>
-    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-28</b> · 2 工具 + 4 新文 + 快报</div>
-    <div class="skim">丰产日,4 篇新文全对口(都读过正文)。含 07-26~07-28。读法:先扫「一句话」,勾中的看摘要。</div>
+    <div class="sub">Claude 为 <b>@LinRds</b> 手挑 · <b>2026-07-28</b> · 2 工具 + 🔁 Agent Loop 专题 + 4 新文 + 快报</div>
+    <div class="skim">丰产日,4 篇新文全对口(都读过正文)。含 07-26~07-28。新增 <b>🔁 Agent Loop 专题</b>——按你新起的兴趣攒的入门到源码。读法:先扫「一句话」,勾中的看摘要。</div>
     <div class="theme">🎯 <b>本期主题:多轮/长任务下评测 coding agent</b>——Phil Schmid、humanlayer、Import AI 三篇不约而同得出同一结论:<b>单轮 benchmark 的漂亮数字严重高估了可靠性,真瓶颈是"多轮迭代里的回归与代码腐化"</b>。正中你"高效验证 AI 代码"。</div>
   </header>
 
@@ -78,6 +80,39 @@
         <div class="tldr"><b>一句话:</b>自托管、你 own 的 <b>AI 伴侣/数字人</b>:实时语音对话、能玩 Minecraft/Factorio,Web/macOS/Windows 都支持。</div>
         <div class="rel"><b>为什么给你:</b>正中你数字人/对话 avatar/TTS 线——一个完成度高、可拆解参考的开源实现,看它怎么把语音+人格+实时交互拼起来。</div>
         <div class="meta"><span class="tag">数字人/AI 伴侣/语音</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="grp">🔁 Agent Loop 专题 <span class="n">你新起的兴趣 · 一次给齐:读懂→手写→抄源码</span></div>
+    <div class="note">主线一句话:<b>Agent 就是"模型在一个循环里反复调工具"</b>(Simon Willison 语)。按三层各留最对口的,链接都点开验过、星数为查询当日。</div>
+    <ol>
+      <li><a class="t" href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank">① 读懂概念 · Building Effective Agents — Anthropic</a>
+        <div class="tldr"><b>一句话:</b>把 agent 拆成"workflow(预设编排)vs agent(模型自己在循环里决定下一步)",告诉你<b>大多数场景别急着上 agent</b>,能用固定循环就别放权。</div>
+        <div class="sum"><div class="h">这一层还有</div>
+          <div class="b"><a href="https://simonwillison.net/2025/May/22/tools-in-a-loop/" target="_blank">Simon Willison · Agents are models using tools in a loop</a> — 一句话把 agent 讲透的定义帖,最省时间。</div>
+          <div class="b"><a href="https://www.langchain.com/blog/the-art-of-loop-engineering" target="_blank">LangChain · The Art of Loop Engineering</a> — 专讲"这个循环怎么设计"(何时停、怎么塞上下文、怎么给工具),正对 loop 二字。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>你要的就是"loop"本身——先用这层把"循环 = agent 的本体"这件事想清楚,再看别人怎么写,少走弯路。</div>
+        <div class="meta"><span class="tag d">概念/务实</span> <span class="tag">Anthropic+Simon+LangChain · EN</span></div></li>
+
+      <li><a class="t" href="https://github.com/Windy3f3f3f3f/claude-code-from-scratch" target="_blank">② 从零手写 · claude-code-from-scratch <span class="star">★2.5k</span></a>
+        <div class="tldr"><b>一句话:</b>从零手写一个 <b>Claude Code 同款</b>的 coding agent 循环——把"读文件→调工具→再决策"的主 loop 一行行拆给你看。</div>
+        <div class="sum"><div class="h">这一层还有</div>
+          <div class="b"><a href="https://github.com/langchain-ai/agents-from-scratch" target="_blank">langchain-ai/agents-from-scratch <span class="star">★2.1k</span></a> — 官方出的"从零搭 agent"教程,notebook 逐步跑。</div>
+          <div class="b"><a href="https://theneuralmaze.substack.com/p/building-a-react-agent-from-scratch" target="_blank">The Neural Maze · Building a ReAct Agent from Scratch</a> — 不依赖框架、纯手写 ReAct 循环,看清"想—做—观察"三拍。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>接你手写 harness、抠 Claude Code 内部的线——这层是"自己把 loop 敲一遍",比读源码更长脑子。</div>
+        <div class="meta"><span class="tag d">上手/手写</span> <span class="tag">from-scratch/ReAct</span></div></li>
+
+      <li><a class="t" href="https://github.com/humanlayer/12-factor-agents" target="_blank">③ 抄现成源码 · humanlayer / 12-factor-agents <span class="star">★25.2k</span></a>
+        <div class="tldr"><b>一句话:</b>把"可靠 agent 循环"总结成 <b>12 条工程原则</b>(自己管控制流、无状态化、把上下文当一等公民…),是这条线最被引用的清单。</div>
+        <div class="sum"><div class="h">这一层还有</div>
+          <div class="b"><a href="https://github.com/huggingface/smolagents" target="_blank">huggingface/smolagents <span class="star">★28.7k</span></a> — 极简 agent 框架,核心就是个"写代码当动作"的 loop,读它主循环最快。</div>
+          <div class="b"><a href="https://github.com/howl-anderson/agentsilex" target="_blank">howl-anderson/agentsilex <span class="star">★453</span></a> — ~300 行读完整个 agent loop,想看"最短能跑的实现"选它。</div>
+        </div>
+        <div class="rel"><b>为什么给你:</b>12-factor 那套"控制流自己管、上下文当一等公民"直接呼应你在追的上下文工程;smolagents/agentsilex 给你"抄一份能跑的"。</div>
+        <div class="meta"><span class="tag d">源码/原则</span> <span class="tag">12-factor/smolagents · EN</span></div></li>
     </ol>
   </section>
 
@@ -143,7 +178,7 @@
 
   <footer>
     <b>四栏:</b>工具=Trending 热榜(查过 star);新文=近窗口带真实日期;深读=存量常青轮换(标注日期、去重);快报=机器粗筛行业新闻(仅标题级)。<br>
-    <b>今天 4 篇新文全对口</b>(都读过正文),丰产日故不做深读轮换;工具栏常驻。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
+    <b>今天 4 篇新文全对口</b>(都读过正文),丰产日故不做深读轮换;工具栏常驻。<b>🔁 Agent Loop 专题</b>是按你新起兴趣攒的一次性资源块(非每日固定栏)。已禁用(前三栏):CSDN、IT之家、serving/推理基建层。<br>
     <a class="pill" href="radar.html">🛰️ 看全量雷达页 →</a>
   </footer>
 </div>

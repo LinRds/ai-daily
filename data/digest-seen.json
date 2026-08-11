@@ -504,6 +504,38 @@
     {
       "url": "https://importai.substack.com/p/import-ai-466-the-bitter-lesson-for",
       "added": "2026-07-28"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://simonwillison.net/2025/May/22/tools-in-a-loop",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.com/Windy3f3f3f3f/claude-code-from-scratch",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.com/langchain-ai/agents-from-scratch",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://theneuralmaze.substack.com/p/building-a-react-agent-from-scratch",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.com/humanlayer/12-factor-agents",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.com/huggingface/smolagents",
+      "added": "2026-07-28"
+    },
+    {
+      "url": "https://github.com/howl-anderson/agentsilex",
+      "added": "2026-07-28"
     }
   ]
 }
